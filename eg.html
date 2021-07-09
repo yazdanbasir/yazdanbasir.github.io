@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Efficiency Gap</title>
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="css/fontAwesome.css">
+        <link rel="stylesheet" href="css/light-box.css">
+        <link rel="stylesheet" href="css/templatemo-style.css">
+        <link href="https://fonts.googleapis.com/css?family=Kanit:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+        <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+    </head>
+
+<body>
+    <nav>
+        <div class="logo">
+            <a href="index.html">DHSS 2021</em></a>
+        </div>
+    </nav>
+
+    <div class="page-heading">
+        <div class="container">
+            <div class="heading-content">
+                <h1>Efficiency Gap</h1>
+            </div>
+        </div>
+    </div>
+
+    <div class="blog-entries center">
+        <div class="container center">
+            <div class="blog-posts center">
+                <div class="row center">
+                    <div class="single-blog-post center">
+                        <div class="text-content center">
+                            <h2>Can a Number Finally Solve The gerrymandering problem?</h2>
+
+                            <p align="justify" style="font-size:22px;">
+                                The 2nd serious approach to tackle partisan gerrymandering is a formula called the “Efficiency Gap” (EG for short) which aims to calculate the number of wasted votes in an election and determine how biased the districting plan was. In other words, it aims to understand how many votes were not needed by the winning party at the end of the day.
+                            </p>
+
+                            <p align="justify" style="font-size:22px;">
+                                The pioneers of the EG are Nicholas Stephanopoulos and Eric McGhee (the creator), Harvard Law professor and research fellow at Public Policy Institute of California, respectively.
+                            </p>
+
+                            <p align="justify" style="font-size:22px;">
+                                It may seem trivial at first glance, but the EG measure gives us a lot of insight into how a certain state has been districted:
+                            </p>
+
+                            <p align="justify" style="font-size:22px;">
+                                “If (nearly) all the wasted votes belong to the winning side, it’s a packed district. If (nearly) all the wasted votes belong to the losing side, it’s a competitive district. And if there are several adjacent districts where most of the wasted votes are on the losing side, then it may be a cracked plan.”
+                            </p>
+
+                            <p align="justify" style="font-size:22px;">
+                                Unlike MCMC where the statistical likelihood of a plan is determined, EG gives each district a score based on its fundamental formula: it’s essentially a measure of the difference between the total votes wasted by the winner and the total votes wasted by the loser. Let’s take a look at this through the example of Maryland’s 6th district:
+                            </p>
+
+                            <img src="maryland6.png" alt="Maryland's 6th District">
+
+                            <p align="justify" style="font-size:22px;">
+                                The closer this number is to 0, the more fair the plan seems to be and a percentage of 7% or more is considered a serious/unconstitutional gerrymander. Here’s the congressional map from the 2016 election cycle that shows how many states were gerrymandered.
+                            </p>
+
+                            <img src="egviolation.png" alt="Violators of the EG threshold">
+
+                            <p align="justify" style="font-size:22px;">
+                                The math behind this formula is intricate, but I’ve made a short video doing my best to explain it as simply as I could:
+                            </p>
+
+
+
+                            <p align="justify" style="font-size:22px;">
+                                Like MCMC, the EG was also used in a prominent court case - this time, trouble was brewing in the state of Wisconsin. Before you head on over to that section and uncover what went down there, feel free to play around with this interactive map showing how much each state was gerrymandered for the 2016 elections (all based on the EG, of course):
+                            </p>
+
+                            <style>.embed-container {position: relative; padding-bottom: 80%; height: 0; max-width: 100%;} .embed-container iframe, .embed-container object, .embed-container iframe{position: absolute; top: 0; left: 0; width: 100%; height: 100%;} small{position: absolute; z-index: 40; bottom: 0; margin-bottom: -15px;}</style><div class="embed-container"><iframe width="500" height="400" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" title="nn" src="//lafayette.maps.arcgis.com/apps/Embed/eg.html?webmap=fb5bd23926b748639a5e99428205c0a3&extent=-142.1393,10.4074,-45.108,56.2223&zoom=true&previewImage=false&scale=true&disable_scroll=true&theme=light"></iframe></div>
+                            <p align="justify" style="font-size:22px;">
+
+                            </p>
+                          
+                      </div>
+                  </div>    
+              </div>
+          </div>
+      </div>
+  </div>
+
+    <footer>
+        <div class="container-fluid">
+            <div class="col-md-12">
+                <p>Template from TemplateMo</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
+
+    <script src="js/vendor/bootstrap.min.js"></script>
+    
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
+
+</body>
+</html>

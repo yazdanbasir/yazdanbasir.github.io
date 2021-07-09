@@ -33,61 +33,98 @@
     </div>
 
     <div class="blog-entries center">
-      <div class="container center">
-          <div class="blog-posts center">
-              <div class="row center">
-                  <div class="single-blog-post center">
-                      <div class="text-content center">
+        <div class="container center">
+            <div class="blog-posts center">
+                <div class="row center">
+                    <div class="single-blog-post center">
+                        <div class="text-content center">
+                            <h2>An Analysis of Court Cases in NC and PA</h2>
 
-                          <h2>An Analysis of Court Cases in NC and PA</h2>
+                            <p align="justify" style="font-size:22px;">
+                                1. North Carolina - Jonathan Mattingly
+                            </p>
 
-                          <p align="justify" style="font-size:22px;">
-                            Let's get a bit nerdy now. In CS and Math, a random walk is model/algorithm which does exactly what the name implies. It’s a process where each next step taken is a completely random choice (in other words, it is made independent of previous choices/steps) but the direction of each step has a certain probability associated with it (this depends on the probability distribution being used). This process is also called Brownian Motion, a term you might be more familiar with. It's conventionallyv used for determining the probabilities of certain paths in a particular two-dimensional or three-dimensional space. If you’re interested, check out the famous <a href="https://medium.com/i-math/the-drunkards-walk-explained-48a0205d304" style="font-size:22px"> Drunken Sailor random walk problem</a> in Mathematics and Computer Science:
-                          </p>
+                            <p align="justify" style="font-size:22px;">
+                                Here we’ll talk about the Supreme Court case I mentioned earlier: Rucho v Common Cause. North Carolina’s congressional plans were revealed and many were furious - they called it a clear gerrymander, a violation of the First Amendment, and an effort in voter suppression amongst many other things. Over the years, the case made its way to the Supreme Court, where Duke University’s Jonathan Mattingly was called in to testify about the case.
+                            </p>
 
-                          <p align="justify" style="font-size:22px;">
-                            Markov Chains are essentially models that indicate how likely it is to jump from one state to the other. A simple visual of a two-state Markov Chain can be seen below:
-                          </p>
+                            <p align="justify" style="font-size:22px;">
+                                Mattingly (the chair of the Math department at Duke University) and his team worked on calculating outliers in North Carolina using MCMC. In accordance with North Carolina’s state laws, they established a range of maps that were considered appropriate and/or permissible in terms of balance/power between the Republican and Democratic parties. They generated 24000 maps that fit this criteria and ran simulations of the elections in each one of them using voter data. This is how it went down:
+                            </p>
 
-                        <video autoplay="" loop="" muted>
-                            <source src="mc.mp4" type="video/mp4" />
-                        </video>
+                            <p align="justify" style="font-size:22px;">
+                                “Using actual 2016 congressional votes, fewer than one percent of the 24,000-plus maps Mattingly’s team generated yielded the 10-3 Republican advantage that North Carolina saw in the 2016 election. Democrats won just three of North Carolina’s 13 U.S. House seats in 2016, even though the votes were closely split 47-53 percent between the two major parties. None of the 24,000 theoretical maps could give Democrats fewer than three seats. In other words, Mattingly says, the General Assembly could not have drawn a map that turned the close statewide vote totals into more lopsided results if they tried.”
+                            </p>
 
-                          <p align="justify" style="font-size:22px;">
-                            The circles represent all possible states and the lines between them indicate the transition between particular states. From the diagram above, we can see that it is possible to get to B from A, to A from B, to remain at A from A, and to remain at B from A. In other words, there are 4 possible transitions in this two-state diagram. Representing two states is pretty simple. However, when there are too many states, the diagram can be hard to understand and actually counterproductive in many cases. Therefore, a Markov Chain can also be represented as a transition table/matrix as seen below:
-                          </p>
+                            <p align="justify" style="font-size:22px;">
+                                To make matters worse, the team also determined that this plan would keep the Republican’s 10-3 advantage intact even if their share of voters went down. Mattinly labeled this as the “firewall effect”.
+                            </p>
 
-                          <img src="tt.png" alt="Transition Table">
+                            <p align="justify" style="font-size:22px;">
+                                Here’s a map that indicates how much advantage the Republicans have on an area by area basis:
+                            </p>
 
-                          <p align="justify" style="font-size:22px;">
-                            A very practical example/real-world use of Markov Chains is Google’s algorithm that determines the order of the search results it shows you.
-                          </p>
+                            <img src="ncmattingly.png" alt="North Carolina's Gerrymandered Map">
 
-                          <p align="justify" style="font-size:22px;">
-                            Putting these two concepts together we have a Markov Chain random walk where there is an x number of possible directions that can be taken from each point and there’s a probability associated with each direction/transition (how likely heading in that direction/to that state was).
-                          </p>
+                            <p align="justify" style="font-size:22px;">
+                                Lawmakers in the case even argued that, on a district-by-district basis, this map resembles an “S” which should stand for the “signature of gerrymandering” because of how bad it was.
+                            </p>
 
-                          <p align="justify" style="font-size:22px;">
-                            The final bit of technicality I want to introduce is Monte Carlo (no, not the city in Monaco or the song by Remi Wolf). I’m talking about Monte Carlo methods in the context of statistics; these are just mathematical models used to estimate some task through repeated random sampling. Now, by putting Markov Chains and Monte Carlo methods together, we end up with Markov Chains Monte Carlo (or MCMC for short). This is an incredibly powerful algorithm that not only estimates outcomes through repetition but takes into account the previous state/position in the space being computed upon. It’s essentially recursive probability with awareness of context/history. Fascinating stuff.
-                          </p>
+                            <p align="justify" style="font-size:22px;">
+                                The case for Rucho v Common Cause was heard on 26th March 2019. Mattingly testified with a wonderful 10-page argument on why the map was gerrymandered, with the gist of his testimony as follows:
+                            </p>
 
-                          <p align="justify" style="font-size:22px;">
-                            As Moon Duchin mentions in her paper, “MCMC has been successfully used to decode prison messages, probe the properties and phase transitions of liquids, find provably accurate fast approximations for hard computational problems, and much more. A 2009 survey by the eminent statistician Persi Diaconis estimated that MCMC drives 10 to 15 percent of the statistical work in science, engineering and business, and the number has probably only gone up since then.”
-                          </p>
+                            <img src="mattinglyopinion.png" alt="North Carolina's Gerrymandered Map">
+                            
+                            <p align="justify" style="font-size:22px;">
+                                As we talked about in an earlier section, the Supreme Court didn’t really rule in favor of Mattingly’s argument - they held the case on the basis that lack of a standard for gerrymandering puts making judgements on it outside the court’s jurisdiction. However, the fact that Mattingly’s opinion was sought after, considered, and part of the dissenting opinion on the case says a lot about the MCMC approach to gerrymandering - the future is bright.
+                            </p>
 
-                          <p align="justify" style="font-size:22px;">
-                            And despite the widespread application of MCMC, they’ve only been seriously used in the study of gerrymandering only from 2014 onwards. It helps in dealing with the enormous complexity of gerrymandering. MCMC essentially determines the probability of following a certain path in a certain space (in this case, the size and shape of a map). Through repetition, MCMC is able to provide a collection of such paths (in this case, possible maps) and their probabilities that are representative of ALL possible maps for that particular area. Now that there’s a sample that is representative of all maps, when individual maps are in doubt, they can be compared to the rest of the sample (by setting a baseline for what an appropriate/fair map of the area is) and it can be determined how unlikely that map is. If it’s very unlikely - i.e. a statistical outlier - then it can be classified as a gerrymandered).
-                          </p>
+                            <p align="justify" style="font-size:22px;">
+                                2. Pennsylvania - Wesley Pegden
+                            </p>
 
-                          <img src="duchin.png" alt="2x2 visual">
+                            <p align="justify" style="font-size:22px;">
+                                While the North Carolina case occurred at the federal level, the Pennsylvania case occurred at the state level. Another difference between the two is that the Pennsylvania case actually resulted in a positive outcome: the plan had been declared an unconstitutional gerrymander.
+                            </p>
 
-                          <p align="justify" style="font-size:22px;">
-                            Seems like a pretty cool approach I’d say. It obviously doesn’t get past the innate complexity of so many maps, but it does handle large computations well enough to be used in two recent and important redistricting cases: North Carolina and Pennsylvania. We’ll take a look at this in the next section.
-                          </p>
+                            <p align="justify" style="font-size:22px;">
+                                “The League of Women Voters brought a lawsuit against the state to argue that the congressional map, drawn by the state’s Republican-controlled General Assembly after the 2010 census, was an unconstitutional gerrymander”.
+                            </p>
 
-                        <p align="justify" style="font-size:22px;">
+                            <p align="justify" style="font-size:22px;">
+                                Again, credit goes to the court for bringing in experts to testify and considering their analysis on the matter. This time it was Carnegie Mellon’s professor of mathematical sciences Wesley Pegden. Wes Pegden didn’t go for the same approach as Mattingly; He “used a different kind of test, appealing to a rigorous theorem that quantifies how unlikely it is that a neutral plan would score much worse than other plans visited by a random walk. His method produces p-values, which constrain how improbable it is to find such anomalous bias by chance.”
+                            </p>
 
-                        </p>
+                            <p align="justify" style="font-size:22px;">
+                                In essence, Pegden’s algorithm changed minute details of the map in question, ran the experiment one trillion times to build up the range of all possible maps, and determined that 99.9999999% of the alternative plans were more fair. In other words, only 0.0000001% of all possible maps were as partisan/biased as the current plan - this enabled Pegden to conclude an obvious partisan gerrymander from the Republican side. He goes into a lot more detail in this expert testimony in <a href="https://www.youtube.com/watch?v=NAS4AsPi1q4" style="font-size:22px;">this TED Talk, if you’re interested</a>.
+                            </p>
+
+                            <p align="justify" style="font-size:22px;">
+                                The gerrymandering was so bad that experts started to call Pennsylvania’s 7th district “Goofy kicking Donald Duck”:
+                            </p>
+
+                            <img src="donald.jpeg" alt="Goofy kicking Donald Duck">
+
+                            <p align="justify" style="font-size:22px;">
+                                But not to despair: the Court seemed to like Pegden’s testimony and ruled in his argument’s favor. The Court sided with the League of Women Voters and declared Pennsylvania’s map an unconstitutional gerrymander: they ordered the relevant authorities to come up with a new plan before the 2018 midterm elections that were coming up.
+                            </p>
+
+                            <p align="justify" style="font-size:22px;">
+                                <a href="https://www.brennancenter.org/sites/default/files/legal-work/LWV_v_PA_Expert_Report_WesleyPegden_11.17.17.pdf" style="font-size:22px;">Here's a link to Pegden’s 26-report highlighting the methods, analysis, and conclusions of his expert testimony.</a>
+                            </p>
+
+                            <p align="justify" style="font-size:22px;">
+                                Another feather in Pegden’s cap is that when Moon Duchin applied her own MCMC framework to this problem (upon Governor Wolf’s request), she reached the same conclusion: Pennsylvania’s map was extremely gerrymandered in favor of the Republicans.
+                            </p>
+
+                            <p align="justify" style="font-size:22px;">
+                                In the grand scheme of things, we can’t really make any conclusions about Mattingly and Pegden’s approaches in relation to each other. It’s not like Mattingly had a less robust approach than Pegden, leading to the Court not ruling in his favor. It’s about circumstances, the arguments being put forward against, the nature of the Court, and unique intricacies that each state presents - it’s an amalgam of all of those things and so much more. What we can say is that these were extremely positive steps in the right direction - this represents a significant shift in the attitudes towards gerrymandering detection and grants MCMC a lot of credibility that only paves the way for more reliance on it.
+                            </p>
+
+                            <p align="justify" style="font-size:22px;">
+
+                            </p>
                           
                       </div>
                   </div>    
