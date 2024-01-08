@@ -1451,6 +1451,7 @@ a {
   background-color: #f6f6f6 !important;
   border: 18px solid #f6f6f6;
   margin-top: -18px;
+  justify-content: center;
 }
 @media (max-width: 768px) {
   .cid-tzrhCTfMQk {
