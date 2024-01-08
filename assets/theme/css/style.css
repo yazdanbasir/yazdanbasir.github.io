@@ -596,6 +596,7 @@ nav .mbr-section-btn {
 .row {
   display: -webkit-flex;
   -webkit-flex-wrap: wrap;
+  margin-top: 30px;
 }
 
 .justify-content-center {
