@@ -887,15 +887,6 @@ blockquote {
     padding-left: 16px;
     padding-right: 16px;
   }
-
-  .row {
-    margin-left: -16px;
-    margin-right: -16px;
-  }
-  /* .row > [class*=col] {
-    padding-left: 16px;
-    padding-right: 16px;
-  } */
 }
 @media (min-width: 768px) {
   .container-fluid {
