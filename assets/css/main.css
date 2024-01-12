@@ -74,6 +74,10 @@ input, select, textarea {
 
 /* Basic */
 
+.logo img {
+    transform: scale(0.75);
+}
+
 	@-ms-viewport {
 		width: device-width;
 	}
