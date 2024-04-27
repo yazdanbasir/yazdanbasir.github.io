@@ -27,11 +27,13 @@
                 max-width: 100%;
                 overflow: hidden;
                 border-radius: 0; /* No rounded corners for full-width */
+                height: 400px; /* Fixed height for the article */
             }
             img {
                 width: 100%;
-                height: auto;
+                height: 100%; /* Adjust to cover the article height */
                 display: block; /* Ensures no gap under the image */
+                object-fit: cover; /* Ensures the image covers the area without distorting its aspect ratio */
             }
             .content {
                 position: absolute;
