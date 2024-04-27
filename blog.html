@@ -35,15 +35,17 @@
         }
         .content {
             position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            text-align: center;
-            color: white;
+            top: 0;
+            left: 0;
             width: 100%;
-            padding: 0 20px; /* Padding horizontally but no vertical padding */
-            box-sizing: border-box;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
             background: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+            color: white;
+            text-align: center;
         }
         h1, h2 {
             font-family: 'Montserrat', sans-serif;
@@ -73,18 +75,18 @@
     </style>
 </head>
 
-    <body>
-        <header>
-            <h1>THOUGHTBOX</h1>
-        </header>
+<body>
+    <header>
+        <h1>THOUGHTBOX</h1>
+    </header>
 
-        <article>
-            <img src="blog/uwcl.jpeg" alt="Descriptive Alt Text">
-            <div class="content">
-                <h2>Article Title</h2>
-                <p class="summary">Here is a summary of the article. It briefly describes the main points or themes of the article content.</p>
-                <a href="#" class="read-more">Read More</a>
-            </div>
-        </article>
-    </body>
+    <article>
+        <img src="blog/uwcl.jpeg" alt="Descriptive Alt Text">
+        <div class="content">
+            <h2>Article Title</h2>
+            <p class="summary">Here is a summary of the article. It briefly describes the main points or themes of the article content.</p>
+            <a href="#" class="read-more">Read More</a>
+        </div>
+    </article>
+</body>
 </html>
