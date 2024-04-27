@@ -21,17 +21,16 @@
             }
             article {
                 position: relative;
-                margin: 20px auto;
-                width: 80%;
-                max-width: 800px;
+                margin: 0 auto;
+                width: 100%;
+                max-width: 100%;
                 overflow: hidden;
-                border-radius: 5px;
-                box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+                border-radius: 0; /* No rounded corners for full-width */
             }
             img {
                 width: 100%;
-                display: block; /* Removes bottom margin/gap */
-                border-radius: 5px 5px 0 0;
+                height: auto;
+                display: block; /* Ensures no gap under the image */
             }
             .content {
                 position: absolute;
@@ -41,9 +40,9 @@
                 text-align: center;
                 color: white;
                 width: 100%;
-                padding: 20px;
+                padding: 0 20px; /* Padding horizontally but no vertical padding */
                 box-sizing: border-box;
-                background: rgba(0, 0, 0, 0.5); /* semi-transparent overlay */
+                background: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
             }
             h1, h2 {
                 font-family: 'Montserrat', sans-serif;
@@ -69,15 +68,6 @@
                 border-radius: 5px;
                 display: inline-block;
                 margin-top: 20px;
-            }
-            footer {
-                text-align: center;
-                padding: 10px 0;
-                background-color: #333;
-                color: white;
-                position: fixed;
-                width: 100%;
-                bottom: 0;
             }
         </style>
     </head>
