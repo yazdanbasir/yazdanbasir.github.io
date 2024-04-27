@@ -20,22 +20,34 @@
                 text-align: center;
             }
             article {
+                position: relative;
                 margin: 20px auto;
                 width: 80%;
                 max-width: 800px;
-                background: #ffffff;
-                padding: 20px;
+                overflow: hidden;
                 border-radius: 5px;
                 box-shadow: 0 2px 5px rgba(0,0,0,0.15);
             }
             img {
                 width: 100%;
-                border-radius: 5px;
+                display: block; /* Removes bottom margin/gap */
+                border-radius: 5px 5px 0 0;
+            }
+            .content {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                text-align: center;
+                color: white;
+                width: 100%;
+                padding: 20px;
+                box-sizing: border-box;
+                background: rgba(0, 0, 0, 0.5); /* semi-transparent overlay */
             }
             h1, h2 {
                 font-family: 'Montserrat', sans-serif;
                 font-weight: 700;
-                color: #000;
             }
             h1 {
                 font-size: 3em;
@@ -45,13 +57,18 @@
             }
             .summary {
                 font-size: 1em;
-                color: #666;
                 line-height: 1.6;
             }
             a.read-more {
                 color: #1e70b8;
                 text-decoration: none;
                 font-weight: bold;
+                background: white;
+                color: #333;
+                padding: 10px 20px;
+                border-radius: 5px;
+                display: inline-block;
+                margin-top: 20px;
             }
             footer {
                 text-align: center;
@@ -72,9 +89,11 @@
 
         <article>
             <img src="blog/uwcl.jpeg" alt="Descriptive Alt Text">
-            <h2>Article Title</h2>
-            <p class="summary">Here is a summary of the article. It briefly describes the main points or themes of the article content.</p>
-            <a href="#" class="read-more">Read More</a>
+            <div class="content">
+                <h2>Article Title</h2>
+                <p class="summary">Here is a summary of the article. It briefly describes the main points or themes of the article content.</p>
+                <a href="#" class="read-more">Read More</a>
+            </div>
         </article>
     </body>
 </html>
