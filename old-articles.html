@@ -455,14 +455,14 @@
         <script>
             var currentIndex = 0; // Start with the first article
             window.onload = function() {
-                var articles = document.getElementsByTagName('article');
+                var articles = document.querySelectorAll('#article-slider article');
                 if (articles.length > 0) {
                     articles[currentIndex].style.display = 'block'; // Show the first article
                 }
             };
 
             function changeArticle(step) {
-                var articles = document.getElementsByTagName('article');
+                var articles = document.querySelectorAll('#article-slider article');
                 articles[currentIndex].style.display = 'none'; // Hide the current article
                 currentIndex += step; // Change index
                 if (currentIndex >= articles.length) {
