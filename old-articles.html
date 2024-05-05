@@ -34,15 +34,16 @@
                 /* Adjust based on your design */
             }
 
-            .left-arrow,
-            .right-arrow {
+            .left-arrow, .right-arrow {
                 position: absolute;
                 top: 50%;
                 transform: translateY(-50%);
                 font-size: 2em;
                 cursor: pointer;
-                color: white;
+                color: white; /* Ensure high contrast against the background */
                 user-select: none;
+                z-index: 1000; /* Ensures it's on top of other content */
+                background-color: rgba(0, 0, 0, 0.5); /* Add background color for visibility */
             }
 
             .left-arrow {
@@ -121,7 +122,7 @@
         </header>
 
         <div class="slider">
-            <div class="left-arrow">⟵</div>
+            <div class="left-arrow"><</div>
 
             <!-- MEDIUM -->
 
@@ -517,42 +518,53 @@
                 </a>
             </article>
 
-            <div class="right-arrow">⟶</div>
+            <div class="right-arrow">></div>
         </div>
 
         <script>
             let currentIndex = 0;
-        const articles = document.querySelectorAll('article');
-        const maxIndex = articles.length - 1;
+            const articles = document.querySelectorAll('article');
+            const maxIndex = articles.length - 1;
 
-        function showArticle(index) {
-            articles.forEach((article, idx) => {
-                if (idx === index) {
-                    article.classList.add('active');
-                } else {
-                    article.classList.remove('active');
+            function showArticle(index) {
+                articles.forEach((article, idx) => {
+                    if (idx === index) {
+                        article.classList.add('active');
+                    } else {
+                        article.classList.remove('active');
+                    }
+                });
+            }
+
+            function updateArrowVisibility() {
+                const leftArrow = document.querySelector('.left-arrow');
+                const rightArrow = document.querySelector('.right-arrow');
+                // Hide left arrow if at the first article
+                leftArrow.style.display = currentIndex > 0 ? 'block' : 'none';
+                // Hide right arrow if at the last article
+                rightArrow.style.display = currentIndex < maxIndex ? 'block' : 'none';
+            }
+
+            document.querySelector('.left-arrow').addEventListener('click', () => {
+                if (currentIndex > 0) {
+                    currentIndex--;
+                    showArticle(currentIndex);
+                    updateArrowVisibility();
                 }
             });
-        }
 
-        document.querySelector('.left-arrow').addEventListener('click', () => {
-            if (currentIndex > 0) {
-                currentIndex--;
-                showArticle(currentIndex);
-            }
-        });
+            document.querySelector('.right-arrow').addEventListener('click', () => {
+                if (currentIndex < maxIndex) {
+                    currentIndex++;
+                    showArticle(currentIndex);
+                    updateArrowVisibility();
+                }
+            });
 
-        document.querySelector('.right-arrow').addEventListener('click', () => {
-            if (currentIndex < maxIndex) {
-                currentIndex++;
-                showArticle(currentIndex);
-            }
-        });
-
-        // Initialize with the first article visible
-        showArticle(0);
+            // Initialize with the first article visible and arrows correctly displayed
+            showArticle(0);
+            updateArrowVisibility();
         </script>
-
 
     </body>
 
