@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Case Studies in MCMC</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="stylesheet" href="/dhss/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/dhss/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="/dhss/css/fontAwesome.css">
+    <link rel="stylesheet" href="/dhss/css/light-box.css">
+    <link rel="stylesheet" href="/dhss/css/templatemo-style.css">
+    <link href="https://fonts.googleapis.com/css?family=Kanit:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+    <script src="/dhss/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+</head>
+
+<body>
+    <nav>
+        <div class="logo">
+            <a href="index.html">DHSS 2021</em></a>
+        </div>
+    </nav>
+
+    <div class="page-heading">
+        <div class="container">
+            <div class="heading-content">
+                <h1>Case Studies in MCMC</h1>
+            </div>
+        </div>
+    </div>
+
+    <div class="blog-entries center">
+        <div class="container center">
+            <div class="blog-posts center">
+                <div class="row center">
+                    <div class="single-blog-post center">
+                        <div class="text-content center">
+                            <h2>An Analysis of Court Cases in NC and PA</h2>
+
+                            <p align="justify" style="font-size:22px;">
+                                1. North Carolina - Jonathan Mattingly
+                            </p>
+
+                            <p align="justify" style="font-size:22px;">
+                                Here we’ll talk about the Supreme Court case I mentioned earlier: Rucho v Common Cause.
+                                North Carolina’s congressional plans were revealed and many were furious - they called
+                                it a clear gerrymander, a violation of the First Amendment, and an effort in voter
+                                suppression amongst many other things. Over the years, the case made its way to the
+                                Supreme Court, where Duke University’s Jonathan Mattingly was called in to testify about
+                                the case.
+                            </p>
+
+                            <p align="justify" style="font-size:22px;">
+                                Mattingly (the chair of the Math department at Duke University) and his team worked on
+                                calculating outliers in North Carolina using MCMC. In accordance with North Carolina’s
+                                state laws, they established a range of maps that were considered appropriate and/or
+                                permissible in terms of balance/power between the Republican and Democratic parties.
+                                They generated 24000 maps that fit this criteria and ran simulations of the elections in
+                                each one of them using voter data. This is how it went down:
+                            </p>
+
+                            <p align="justify" style="font-size:22px;">
+                                “Using actual 2016 congressional votes, fewer than one percent of the 24,000-plus maps
+                                Mattingly’s team generated yielded the 10-3 Republican advantage that North Carolina saw
+                                in the 2016 election. Democrats won just three of North Carolina’s 13 U.S. House seats
+                                in 2016, even though the votes were closely split 47-53 percent between the two major
+                                parties. None of the 24,000 theoretical maps could give Democrats fewer than three
+                                seats. In other words, Mattingly says, the General Assembly could not have drawn a map
+                                that turned the close statewide vote totals into more lopsided results if they tried.”
+                            </p>
+
+                            <p align="justify" style="font-size:22px;">
+                                To make matters worse, the team also determined that this plan would keep the
+                                Republican’s 10-3 advantage intact even if their share of voters went down. Mattinly
+                                labeled this as the “firewall effect”.
+                            </p>
+
+                            <p align="justify" style="font-size:22px;">
+                                Here’s a map that indicates how much advantage the Republicans have on an area by area
+                                basis:
+                            </p>
+
+                            <img src="/dhss/media/ncmattingly.png" alt="North Carolina's Gerrymandered Map">
+
+                            <p align="justify" style="font-size:22px;">
+                                Lawmakers in the case even argued that, on a district-by-district basis, this map
+                                resembles an “S” which should stand for the “signature of gerrymandering” because of how
+                                bad it was.
+                            </p>
+
+                            <p align="justify" style="font-size:22px;">
+                                The case for Rucho v Common Cause was heard on 26th March 2019. Mattingly testified with
+                                a wonderful 10-page argument on why the map was gerrymandered, with the gist of his
+                                testimony as follows:
+                            </p>
+
+                            <img src="/dhss/media/mattinglyopinion.png" alt="North Carolina's Gerrymandered Map">
+
+                            <p align="justify" style="font-size:22px;">
+                                As we talked about in an earlier section, the Supreme Court didn’t really rule in favor
+                                of Mattingly’s argument - they held the case on the basis that lack of a standard for
+                                gerrymandering puts making judgements on it outside the court’s jurisdiction. However,
+                                the fact that Mattingly’s opinion was sought after, considered, and part of the
+                                dissenting opinion on the case says a lot about the MCMC approach to gerrymandering -
+                                the future is bright.
+                            </p>
+
+                            <p align="justify" style="font-size:22px;">
+                                2. Pennsylvania - Wesley Pegden
+                            </p>
+
+                            <p align="justify" style="font-size:22px;">
+                                While the North Carolina case occurred at the federal level, the Pennsylvania case
+                                occurred at the state level. Another difference between the two is that the Pennsylvania
+                                case actually resulted in a positive outcome: the plan had been declared an
+                                unconstitutional gerrymander.
+                            </p>
+
+                            <p align="justify" style="font-size:22px;">
+                                “The League of Women Voters brought a lawsuit against the state to argue that the
+                                congressional map, drawn by the state’s Republican-controlled General Assembly after the
+                                2010 census, was an unconstitutional gerrymander”.
+                            </p>
+
+                            <p align="justify" style="font-size:22px;">
+                                Again, credit goes to the court for bringing in experts to testify and considering their
+                                analysis on the matter. This time it was Carnegie Mellon’s professor of mathematical
+                                sciences Wesley Pegden. Wes Pegden didn’t go for the same approach as Mattingly; He
+                                “used a different kind of test, appealing to a rigorous theorem that quantifies how
+                                unlikely it is that a neutral plan would score much worse than other plans visited by a
+                                random walk. His method produces p-values, which constrain how improbable it is to find
+                                such anomalous bias by chance.”
+                            </p>
+
+                            <p align="justify" style="font-size:22px;">
+                                In essence, Pegden’s algorithm changed minute details of the map in question, ran the
+                                experiment one trillion times to build up the range of all possible maps, and determined
+                                that 99.9999999% of the alternative plans were more fair. In other words, only
+                                0.0000001% of all possible maps were as partisan/biased as the current plan - this
+                                enabled Pegden to conclude an obvious partisan gerrymander from the Republican side. He
+                                goes into a lot more detail in this expert testimony in <a
+                                    href="https://www.youtube.com/watch?v=NAS4AsPi1q4" style="font-size:22px;">this TED
+                                    Talk, if you’re interested</a>.
+                            </p>
+
+                            <p align="justify" style="font-size:22px;">
+                                The gerrymandering was so bad that experts started to call Pennsylvania’s 7th district
+                                “Goofy kicking Donald Duck”:
+                            </p>
+
+                            <img src="/dhss/media/donald.jpeg" alt="Goofy kicking Donald Duck">
+
+                            <p align="justify" style="font-size:22px;">
+                                But not to despair: the Court seemed to like Pegden’s testimony and ruled in his
+                                argument’s favor. The Court sided with the League of Women Voters and declared
+                                Pennsylvania’s map an unconstitutional gerrymander: they ordered the relevant
+                                authorities to come up with a new plan before the 2018 midterm elections that were
+                                coming up.
+                            </p>
+
+                            <p align="justify" style="font-size:22px;">
+                                <a href="https://www.brennancenter.org/sites/default/files/legal-work/LWV_v_PA_Expert_Report_WesleyPegden_11.17.17.pdf"
+                                    style="font-size:22px;">Here's a link to Pegden’s 26-report highlighting the
+                                    methods, analysis, and conclusions of his expert testimony.</a>
+                            </p>
+
+                            <p align="justify" style="font-size:22px;">
+                                Another feather in Pegden’s cap is that when Moon Duchin applied her own MCMC framework
+                                to this problem (upon Governor Wolf’s request), she reached the same conclusion:
+                                Pennsylvania’s map was extremely gerrymandered in favor of the Republicans.
+                            </p>
+
+                            <p align="justify" style="font-size:22px;">
+                                In the grand scheme of things, we can’t really make any conclusions about Mattingly and
+                                Pegden’s approaches in relation to each other. It’s not like Mattingly had a less robust
+                                approach than Pegden, leading to the Court not ruling in his favor. It’s about
+                                circumstances, the arguments being put forward against, the nature of the Court, and
+                                unique intricacies that each state presents - it’s an amalgam of all of those things and
+                                so much more. What we can say is that these were extremely positive steps in the right
+                                direction - this represents a significant shift in the attitudes towards gerrymandering
+                                detection and grants MCMC a lot of credibility that only paves the way for more reliance
+                                on it.
+                            </p>
+
+                            <p align="justify" style="font-size:22px;">
+
+                            </p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container-fluid">
+            <div class="col-md-12">
+                <p>Template from TemplateMo</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="/dhss/js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
+    <script src="/dhss/js/vendor/bootstrap.min.js"></script>
+    <script src="/dhss/js/plugins.js"></script>
+    <script src="/dhss/js/main.js"></script>
+</body>
+</html>
