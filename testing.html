@@ -9,21 +9,18 @@
         body, html {
             margin: 0;
             padding: 0;
-            height: 100%;
             display: flex;
             flex-direction: column;
         }
         .image-container {
             position: relative;
             width: 100%;
-            height: 50vh; /* Each image will take half of the viewport height */
             overflow: hidden; /* Ensures that the images don't overflow their containers */
         }
         .image-container img {
             width: 100%;
-            height: 100%;
-            object-fit: cover; /* Ensures the image covers the container while maintaining aspect ratio */
-            min-height: 50vh; /* Ensures the image doesn't go below half the viewport height */
+            height: auto;
+            display: block;
         }
         .centered-text {
             position: absolute;
@@ -38,12 +35,12 @@
 </head>
 
 <body>
-    <div class="image-container">
+    <div class="image-container" style="min-height: 800px;"> <!-- Use the actual height of the first image -->
         <img src="/portfolio/images/floodlights.jpeg" alt="First Image">
         <div class="centered-text">Centered Text</div>
     </div>
     
-    <div class="image-container">
+    <div class="image-container" style="min-height: 600px;"> <!-- Use the actual height of the second image -->
         <img src="/portfolio/images/bokeh.png" alt="Second Image">
     </div>
 </body>
