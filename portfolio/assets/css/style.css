@@ -242,14 +242,15 @@ nav.navbar.bootsnav .navbar-toggle i{color: #ff545a;}
         4.  Welcome-hero
 --------------------------------------*/
 .welcome-hero {
-    position: relative;
-    background:url(/portfolio/images/floodlights.jpeg)no-repeat;
-    background-position:center;
-    background-size:cover;
-    text-align: center;
-    height:800px;
-    z-index: 1;
+    position: relative; /* Positions the element relative to its normal position */
+    background-image: url("/portfolio/images/floodlights.jpeg"); /* Adds a background image */
+    background-position: center; /* Centers the background image */
+    background-size: cover; /* Scales the background image to cover the entire element */
+    text-align: center; /* Centers the text horizontally within the element */
+    height: 800px; /* Sets the height of the element */
+    z-index: 1; /* Sets the stacking order of the element */
 }
+
 .welcome-hero:before{
     position: absolute;
     content: " ";
