@@ -1,50 +1,89 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  		<title>DHSS 2021</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="apple-touch-icon" href="apple-touch-icon.png">
-        <link rel="icon" href="/dhss/media/grid.png" type="image/png">
-        <link rel="stylesheet" href="/dhss/css/bootstrap.min.css">
-        <link rel="stylesheet" href="/dhss/css/bootstrap-theme.min.css">
-        <link rel="stylesheet" href="/dhss/css/fontAwesome.css">
-        <link rel="stylesheet" href="/dhss/css/light-box.css">
-        <link rel="stylesheet" href="/dhss/css/templatemo-style.css">
-        <link href="https://fonts.googleapis.com/css?family=Kanit:100,200,300,400,500,600,700,800,900" rel="stylesheet">
-        <script src="/dhss/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
-    </head>
 
-    <body>
-        <nav><div class="logo"><a href="index.html">DHSS 2021</em></a></div></nav>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>DHSS 2021</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="icon" href="/dhss/media/grid.png" type="image/png">
+    <link rel="stylesheet" href="/dhss/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/dhss/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="/dhss/css/fontAwesome.css">
+    <link rel="stylesheet" href="/dhss/css/light-box.css">
+    <link rel="stylesheet" href="/dhss/css/templatemo-style.css">
+    <link href="https://fonts.googleapis.com/css?family=Kanit:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+    <script src="/dhss/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+    <style>
+        #video-container {
+            position: relative;
+        }
 
-        <div id="video-container">
-            <!-- <div class="video-overlay"></div> -->
+        .video-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.4);
+            /* Black with 40% opacity */
+            z-index: 1;
+        }
 
-            <div class="video-content">
-                <div class="inner">
+        .video-content {
+            position: relative;
+            z-index: 2;
+            color: white;
+            /* Ensure the text is visible against the overlay */
+            text-align: center;
+            /* Center the text */
+            padding: 20px;
+            /* Optional: Add some padding to the content */
+        }
+
+        video {
+            width: 100%;
+            height: auto;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <div class="logo"><a href="index.html">DHSS 2021</em></a></div>
+    </nav>
+
+    <div id="video-container">
+        <div class="video-overlay"></div>
+
+        <div class="video-content">
+            <div class="inner">
                 <h1>Numbers, Districts, and People:</h1>
-                <!-- <h2></h2> -->
                 <h1>The Fight Against Partisan Gerrymandering</h1>
-                    <div class="scroll-icon">
-                        <a class="scrollTo" data-scrollTo="portfolio" href="#"><img src="img/scroll-icon.png" alt=""></a>
-                    </div>    
+                <div class="scroll-icon">
+                    <a class="scrollTo" data-scrollTo="portfolio" href="#"><img src="img/scroll-icon.png" alt=""></a>
                 </div>
             </div>
-
-            <video autoplay="" loop="" muted>
-                <source src="/dhss/media/loop.mp4" type="video/mp4" />
-            </video>
         </div>
 
-        <div class="full-screen-portfolio" id="portfolio">
-            <div class="container-fluid">
-                
-                <div class="col-md-4 col-sm-6">
-                    <div class="portfolio-item">
-                        <a href="/dhss/pages/overview.html"><div class="thumb">
+        <video autoplay="" loop="" muted>
+            <source src="/dhss/media/loop.mp4" type="video/mp4" />
+        </video>
+    </div>
+
+    <div class="full-screen-portfolio" id="portfolio">
+        <div class="container-fluid">
+
+            <div class="col-md-4 col-sm-6">
+                <div class="portfolio-item">
+                    <a href="/dhss/pages/overview.html">
+                        <div class="thumb">
                             <div class="hover-effect">
                                 <div class="hover-content">
                                     <h1>Overview</h1>
@@ -54,13 +93,15 @@
                             <div class="image">
                                 <img src="/dhss/media/overview.png">
                             </div>
-                        </div></a>
-                    </div>
+                        </div>
+                    </a>
                 </div>
+            </div>
 
-                <div class="col-md-4 col-sm-6">
-                    <div class="portfolio-item">
-                        <a href="/dhss/pages/whatisgerrymandering.html"><div class="thumb">
+            <div class="col-md-4 col-sm-6">
+                <div class="portfolio-item">
+                    <a href="/dhss/pages/whatisgerrymandering.html">
+                        <div class="thumb">
                             <div class="hover-effect">
                                 <div class="hover-content">
                                     <h1>What is gerrymandering?</h1>
@@ -70,13 +111,15 @@
                             <div class="image">
                                 <img src="/dhss/media/whatisgerrymandering.png">
                             </div>
-                        </div></a>
-                    </div>
+                        </div>
+                    </a>
                 </div>
+            </div>
 
-                <div class="col-md-4 col-sm-6">
-                    <div class="portfolio-item">
-                        <a href="/dhss/pages/whatsthebigdeal.html"><div class="thumb">
+            <div class="col-md-4 col-sm-6">
+                <div class="portfolio-item">
+                    <a href="/dhss/pages/whatsthebigdeal.html">
+                        <div class="thumb">
                             <div class="hover-effect">
                                 <div class="hover-content">
                                     <h1>What's the big deal?</h1>
@@ -86,13 +129,15 @@
                             <div class="image">
                                 <img src="/dhss/media/whatsthebigdeal.png">
                             </div>
-                        </div></a>
-                    </div>
+                        </div>
+                    </a>
                 </div>
+            </div>
 
-                <div class="col-md-4 col-sm-6">
-                    <div class="portfolio-item">
-                        <a href="/dhss/pages/mcmc.html"><div class="thumb">
+            <div class="col-md-4 col-sm-6">
+                <div class="portfolio-item">
+                    <a href="/dhss/pages/mcmc.html">
+                        <div class="thumb">
                             <div class="hover-effect">
                                 <div class="hover-content">
                                     <h1>Markov Chain Monte Carlo</h1>
@@ -102,13 +147,15 @@
                             <div class="image">
                                 <img src="/dhss/media/randomwalks.png">
                             </div>
-                        </div></a>
-                    </div>
+                        </div>
+                    </a>
                 </div>
+            </div>
 
-                <div class="col-md-4 col-sm-6">
-                    <div class="portfolio-item">
-                        <a href="/dhss/pages/casestudiesinmcmc.html"><div class="thumb">
+            <div class="col-md-4 col-sm-6">
+                <div class="portfolio-item">
+                    <a href="/dhss/pages/casestudiesinmcmc.html">
+                        <div class="thumb">
                             <div class="hover-effect">
                                 <div class="hover-content">
                                     <h1>Case Studies in MCMC</h1>
@@ -118,13 +165,15 @@
                             <div class="image">
                                 <img src="/dhss/media/northcarolina.png">
                             </div>
-                        </div></a>
-                    </div>
+                        </div>
+                    </a>
                 </div>
+            </div>
 
-                <div class="col-md-4 col-sm-6">
-                    <div class="portfolio-item">
-                        <a href="/dhss/pages/eg.html"><div class="thumb">
+            <div class="col-md-4 col-sm-6">
+                <div class="portfolio-item">
+                    <a href="/dhss/pages/eg.html">
+                        <div class="thumb">
                             <div class="hover-effect">
                                 <div class="hover-content">
                                     <h1>The Efficiency Gap</h1>
@@ -134,13 +183,15 @@
                             <div class="image">
                                 <img src="/dhss/media/eg.png">
                             </div>
-                        </div></a>
-                    </div>
+                        </div>
+                    </a>
                 </div>
+            </div>
 
-                <div class="col-md-4 col-sm-6">
-                    <div class="portfolio-item">
-                        <a href="/dhss/pages/casestudiesineg.html"><div class="thumb">
+            <div class="col-md-4 col-sm-6">
+                <div class="portfolio-item">
+                    <a href="/dhss/pages/casestudiesineg.html">
+                        <div class="thumb">
                             <div class="hover-effect">
                                 <div class="hover-content">
                                     <h1>Case Studies in EG</h1>
@@ -150,13 +201,15 @@
                             <div class="image">
                                 <img src="/dhss/media/wisconsin.png">
                             </div>
-                        </div></a>
-                    </div>
+                        </div>
+                    </a>
                 </div>
+            </div>
 
-                <div class="col-md-4 col-sm-6">
-                    <div class="portfolio-item">
-                        <a href="/dhss/pages/need.html"><div class="thumb">
+            <div class="col-md-4 col-sm-6">
+                <div class="portfolio-item">
+                    <a href="/dhss/pages/need.html">
+                        <div class="thumb">
                             <div class="hover-effect">
                                 <div class="hover-content">
                                     <h1>Why do we need to do all this?</h1>
@@ -166,13 +219,15 @@
                             <div class="image">
                                 <img src="/dhss/media/votersupp.png">
                             </div>
-                        </div></a>
-                    </div>
+                        </div>
+                    </a>
                 </div>
+            </div>
 
-                <div class="col-md-4 col-sm-6">
-                    <div class="portfolio-item">
-                        <a href="/dhss/pages/finalwords.html"><div class="thumb">
+            <div class="col-md-4 col-sm-6">
+                <div class="portfolio-item">
+                    <a href="/dhss/pages/finalwords.html">
+                        <div class="thumb">
                             <div class="hover-effect">
                                 <div class="hover-content">
                                     <h1>Final Words</h1>
@@ -182,26 +237,27 @@
                             <div class="image">
                                 <img src="/dhss/media/finalword.png">
                             </div>
-                        </div></a>
-                    </div>
+                        </div>
+                    </a>
                 </div>
+            </div>
 
+        </div>
+    </div>
+
+    <footer>
+        <div class="container-fluid">
+            <div class="col-md-12">
+                <p>Template from TemplateMo</p>
             </div>
         </div>
+    </footer>
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="/dhss/js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
+    <script src="/dhss/js/vendor/bootstrap.min.js"></script>
+    <script src="/dhss/js/plugins.js"></script>
+    <script src="/dhss/js/main.js"></script>
+</body>
 
-        <footer>
-            <div class="container-fluid">
-                <div class="col-md-12">
-                    <p>Template from TemplateMo</p>
-                </div>
-            </div>
-        </footer>
-
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="/dhss/js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
-        <script src="/dhss/js/vendor/bootstrap.min.js"></script>
-        <script src="/dhss/js/plugins.js"></script>
-        <script src="/dhss/js/main.js"></script>
-    </body>
 </html>
