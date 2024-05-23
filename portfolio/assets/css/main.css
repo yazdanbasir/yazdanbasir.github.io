@@ -2244,73 +2244,79 @@ input, select, textarea {
 /* Intro */
 
 	#intro {
-		background: url("/portfolio/images/floodlights.jpeg");
+		background: url("/portfolio/images/overlay.png"), url("/portfolio/images/floodlights.jpeg");
 		background-size: 256px 256px, cover;
 		background-attachment: fixed, fixed;
 		background-position: top left, bottom center;
 		background-repeat: repeat, no-repeat;
 	}
 
-	#one, #two, #three, #four, #five, #six, #seven, #eight, #nine, #ten {
-		position: relative;
-	}
-	
-	#one::before, #two::before, #three::before, #four::before, #five::before, #six::before, #seven::before, #eight::before, #nine::before, #ten::before {
-		content: "";
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		background-color: black;
-		opacity: 0.3; /* 30% opacity */
-		z-index: 1;
-	}
-	
-	#one, #two, #three, #four, #five, #six, #seven, #eight, #nine, #ten {
+	#one {
+		background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("/portfolio/images/korea.jpeg");
 		background-size: 256px 256px, cover;
 		background-attachment: fixed, fixed;
 		background-position: top left, center center;
-		z-index: 0;
-	}
-	
-	#one {
-		background: url("/portfolio/images/korea.jpeg");
 	}
 	
 	#two {
-		background: url("/portfolio/images/skardu.JPG");
+		background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("/portfolio/images/skardu.JPG");
+		background-size: 256px 256px, cover;
+		background-attachment: fixed, fixed;
+		background-position: top left, center center;
 	}
 	
 	#three {
-		background: url("/portfolio/images/wall.jpg");
+		background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("/portfolio/images/wall.jpg");
+		background-size: 256px 256px, cover;
+		background-attachment: fixed, fixed;
+		background-position: top left, center center;
 	}
 	
 	#four {
-		background: url("/portfolio/images/bokeh.png");
+		background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("/portfolio/images/bokeh.png");
+		background-size: 256px 256px, cover;
+		background-attachment: fixed, fixed;
+		background-position: top left, center center;
 	}
 	
 	#five {
-		background: url("/portfolio/images/tropical.jpeg");
+		background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("/portfolio/images/tropical.jpeg");
+		background-size: 256px 256px, cover;
+		background-attachment: fixed, fixed;
+		background-position: top left, center center;
 	}
 	
 	#six {
-		background: url("/portfolio/images/fall.jpeg");
+		background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("/portfolio/images/fall.jpeg");
+		background-size: 256px 256px, cover;
+		background-attachment: fixed, fixed;
+		background-position: top left, center center;
 	}
 	
 	#seven {
-		background: url("/portfolio/images/two.jpg");
+		background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("/portfolio/images/two.jpg");
+		background-size: 256px 256px, cover;
+		background-attachment: fixed, fixed;
+		background-position: top left, center center;
 	}
 	
 	#eight {
-		background: url("/portfolio/images/two.jpg");
+		background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("/portfolio/images/two.jpg");
+		background-size: 256px 256px, cover;
+		background-attachment: fixed, fixed;
+		background-position: top left, center center;
 	}
 	
 	#nine {
-		background: url("/portfolio/images/two.jpg");
+		background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("/portfolio/images/two.jpg");
+		background-size: 256px 256px, cover;
+		background-attachment: fixed, fixed;
+		background-position: top left, center center;
 	}
 	
 	#ten {
-		background: url("/portfolio/images/two.jpg");
-	}
-	
+		background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("/portfolio/images/two.jpg");
+		background-size: 256px 256px, cover;
+		background-attachment: fixed, fixed;
+		background-position: top left, center center;
+	}	
