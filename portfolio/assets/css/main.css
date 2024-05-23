@@ -682,8 +682,8 @@ input, select, textarea {
 		input[type="reset"].down,
 		.button.down,
 		button.down {
-			width: 5em;
-			height: 5em;
+			width: 3em;
+			height: 3em;
 			line-height: 4.5em;
 			padding: 0;
 			background-image: url("images/dark-arrow.svg");
@@ -2072,12 +2072,6 @@ input, select, textarea {
 
 				.main.dark .button.style2.down {
 					background-image: url("images/dark-arrow.svg");
-					background-size: 50%; /* Resize the background image to 50% */
-					width: 50%; /* Set the width of the button to 50% */
-					height: 50%; /* Set the height of the button to 50% */
-					background-repeat: no-repeat; /* Prevent the image from repeating */
-					background-position: center; /* Center the image within the button */
-					display: inline-block; /* Ensure the element behaves like a block element */
 				}
 
 		body.is-touch .main {
