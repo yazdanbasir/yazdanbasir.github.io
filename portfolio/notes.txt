@@ -1,5 +1,6 @@
 Projects to add:
 
+And add pics
 
 Lafayette MSOC
 
@@ -13,3 +14,4 @@ The Life App
 
 JRE Analyzer
 
+Food Tasting
