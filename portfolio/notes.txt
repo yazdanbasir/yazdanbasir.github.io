@@ -1,10 +1,3 @@
-Projects to add:
-
-Find more (and better) picz
-
-
-Food Tasting
-
-The Life App
-
-JRE Analyzer
+- Find more (and better) picz
+- Add up button?
+- Make landing page and project page buttons uniform
