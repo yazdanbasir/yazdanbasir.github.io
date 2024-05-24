@@ -1,2 +1,2 @@
-- Find more (and better) picz
-- Add up button?
+- Find more (and better) picz?
+- Speed up animations?
