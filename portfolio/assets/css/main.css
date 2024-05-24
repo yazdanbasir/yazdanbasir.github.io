@@ -1901,16 +1901,10 @@ input, select, textarea {
 
 		}
 
-	/* body {
-		padding-top: 3em;
-	} */
-
 		@media screen and (max-width: 736px) {
-
 			body {
 				padding-top: 2.5em;
 			}
-
 		}
 
 /* Main */
