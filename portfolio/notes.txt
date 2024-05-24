@@ -1,3 +1,2 @@
 - Find more (and better) picz
 - Add up button?
-- Make landing page and project page buttons uniform
