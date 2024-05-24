@@ -697,7 +697,7 @@ input, select, textarea {
 			.button.down.anchored,
 			button.down.anchored {
 				bottom: 0;
-				margin-bottom: 0.5%;
+				margin-bottom: 4%;
 				margin-left: -2.5em;
 			}
 
