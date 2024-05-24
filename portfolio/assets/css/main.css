@@ -1901,9 +1901,9 @@ input, select, textarea {
 
 		}
 
-	/* body {
+	body {
 		padding-top: 3em;
-	} */
+	}
 
 		@media screen and (max-width: 736px) {
 
