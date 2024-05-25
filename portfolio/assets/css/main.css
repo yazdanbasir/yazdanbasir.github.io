@@ -698,7 +698,7 @@ input, select, textarea {
 			button.down.anchored {
 				bottom: 0;
 				margin-bottom: 4%;
-				margin-left: -2.5em;
+				margin-left: -1.5em;
 			}
 
 		input[type="button"].anchored,
@@ -1986,7 +1986,7 @@ input, select, textarea {
 				-moz-transition: -moz-transform 1s ease;
 				-webkit-transition: -webkit-transform 1s ease;
 				-ms-transition: -ms-transform 1s ease;
-				transition: transform 1s ease;
+				transition: transform 0.65s ease;
 				-moz-transform: translateZ(0);
 				-webkit-transform: translateZ(0);
 				-ms-transform: translateZ(0);
