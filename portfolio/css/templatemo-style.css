@@ -312,7 +312,6 @@ nav {
   padding-right: 0px;
 }
 
-
 .portfolio-item img {
   width: 100%;
   overflow: hidden;
@@ -322,6 +321,15 @@ nav {
   position: relative;
 }
 
+.portfolio-item .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4); /* Black with 40% opacity */
+    z-index: 1; /* Ensure it is above the image but below the text */
+}
 
 .portfolio-item .hover-effect .hover-content {
     position: absolute;
@@ -329,8 +337,8 @@ nav {
     width: 100%;
     bottom: 0;
     left: 0;
+    z-index: 2; /* Ensure text is above the overlay */
 }
-
 
 .full-screen-portfolio .portfolio-item h1 {
   position: relative;
@@ -343,16 +351,16 @@ nav {
   transform: translateY(25px);
   transition: .5s ease-in-out;
   letter-spacing: 0.5px;
- }
+}
 
- .full-screen-portfolio .portfolio-item em {
+.full-screen-portfolio .portfolio-item em {
   font-style: normal;
   font-weight: 200;
- }
+}
 
 .full-screen-portfolio .portfolio-item:hover h1 {
   transform: translateY(0);
- }
+}
 
 .full-screen-portfolio .portfolio-item p {
   padding-left: 20px;
@@ -364,13 +372,13 @@ nav {
   transform: translateY(10px);
   transition: .5s ease-in-out;
   text-transform: uppercase;
- }
+}
 
- .full-screen-portfolio .portfolio-item {
- text-align: center;
- line-height: 150%;
- text-transform: lowercase;
- cursor: pointer;
+.full-screen-portfolio .portfolio-item {
+  text-align: center;
+  line-height: 150%;
+  text-transform: lowercase;
+  cursor: pointer;
 }
 
 .full-screen-portfolio .portfolio-item:hover p {
