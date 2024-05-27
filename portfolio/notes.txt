@@ -1,4 +1,9 @@
-- Speed up animations?
-- Add nav bar
-- Add popup with project descriptions
-- Change background video?
+1. Fix the white line underneath the first image?
+
+2. Add nav bar
+
+3. Add popup with project descriptions
+
+4. Change background video?
+
+5. Speed up animations?
