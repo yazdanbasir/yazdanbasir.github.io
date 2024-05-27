@@ -1,2 +1,3 @@
-- Find more (and better) picz?
 - Speed up animations?
+- Add nav bar
+- Add popup with project descriptions
