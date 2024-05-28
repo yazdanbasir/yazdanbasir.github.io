@@ -1,8 +1,6 @@
 FUNCTIONAL/PRIORITY:
-- Fix the nav bar styling
-- Fix the white line underneath the first image?
 - Add popup with project descriptions
+- Fix the white line underneath the first image? (This is happening based on browser width??)
 
 AESTHETIC/SECONDARY:
 - Change background video?
-- Speed up animations?
