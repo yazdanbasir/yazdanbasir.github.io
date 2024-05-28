@@ -1,9 +1,8 @@
-1. Fix the white line underneath the first image?
+FUNCTIONAL/PRIORITY:
+- Fix the nav bar styling
+- Fix the white line underneath the first image?
+- Add popup with project descriptions
 
-2. Add nav bar
-
-3. Add popup with project descriptions
-
-4. Change background video?
-
-5. Speed up animations?
+AESTHETIC/SECONDARY:
+- Change background video?
+- Speed up animations?
