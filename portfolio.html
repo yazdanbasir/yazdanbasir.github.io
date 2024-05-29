@@ -22,12 +22,12 @@
 				align-items: center;
 				padding: 10px 20px;
 			}
-		
+
 			nav .logo a {
 				text-decoration: none;
 				font-size: 1.5em;
 			}
-		
+
 			nav ul {
 				list-style-type: none;
 				display: flex;
@@ -35,23 +35,63 @@
 				margin: 0;
 				padding: 0;
 			}
-		
+
 			nav ul li {
 				margin: 0;
 				padding: 0;
 			}
-		
+
 			nav ul li a {
 				text-decoration: none;
 				font-size: 1.5em;
 				color: #fff;
 			}
-		</style>	
+
+			/* Modal styles */
+			.modal {
+				display: none;
+				position: fixed;
+				z-index: 1000;
+				left: 0;
+				top: 0;
+				width: 100%;
+				height: 100%;
+				overflow: auto;
+				background-color: rgba(0, 0, 0, 0.5);
+				align-items: center;
+				justify-content: center;
+			}
+
+			.modal-content {
+				background: rgba(255, 255, 255, 0.8);
+				backdrop-filter: blur(10px);
+				border-radius: 10px;
+				padding: 20px;
+				width: 80%;
+				max-width: 600px;
+				box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+				margin: auto;
+			}
+
+			.close {
+				color: #aaa;
+				float: right;
+				font-size: 28px;
+				font-weight: bold;
+			}
+
+			.close:hover,
+			.close:focus {
+				color: black;
+				text-decoration: none;
+				cursor: pointer;
+			}
+		</style>
 	</head>
 
 	<body>
 		<nav>
-			<div class="logo"><a href="portfolio.html">Yazdan's Portfolio</em></a></div>
+			<div class="logo"><a href="portfolio.html">Yazdan's Portfolio</a></div>
 			<ul>
 				<li><a href="/portfolio/Yazdan_Basir_Resume.pdf" target="_blank">Resumé</a></li>
 				<li><a href="https://yazdanbasir.github.io/blog.html" target="_blank">Blog</a></li>
@@ -83,17 +123,16 @@
 				<!-- Lafayette Men's Soccer -->
 				<div class="col-md-4 col-sm-6">
 					<div class="portfolio-item">
-						<a href="">
+						<a href="javascript:void(0);" onclick="openModal('Lafayette Men\'s Soccer', 'Dashboard for player performance metrics')">
 							<div class="thumb">
 								<div class="hover-effect">
 									<div class="hover-content">
 										<h1><strong>Lafayette Men's Soccer</strong></h1>
 										<p>Dashboard for player performance metrics</p>
-										<!-- <p>I worked as the first-ever data engineer and analyst for Lafayette's Men's Soccer team. I developed a data processing pipeline that scraped, consolidated, and cleaned the team's performance metrics from Wyscout and supplied it to a custom-built dashboard, where the various statistics could be filtered and visualized according to the needs of the coaches/team to inform training strategy and opponent analysis. (Data anonymized for privacy)</p> -->
 									</div>
 								</div>
 								<div class="image">
-									<div class="overlay"></div> <!-- New line -->
+									<div class="overlay"></div>
 									<img src="/portfolio/images/atleti.jpeg">
 								</div>
 							</div>
@@ -104,17 +143,16 @@
 				<!-- Food Tasting -->
 				<div class="col-md-4 col-sm-6">
 					<div class="portfolio-item">
-						<a href="">
+						<a href="javascript:void(0);" onclick="openModal('Food Tasting', 'App to automate/consolidate event logistics')">
 							<div class="thumb">
 								<div class="hover-effect">
 									<div class="hover-content">
 										<h1><strong>Food Tasting</strong></h1>
 										<p>App to automate/consolidate event logistics</p>
-										<!-- <p>A web application to streamline the organization of one of Lafayette College's major annual events, Food Tasting (hosted by the International Students' Association). This project integrates Giant's inventory and automates, cleans up, and consolidates the process of ingredient submission, grocery shopping, and resource allocation for the big day!</p> -->
 									</div>
 								</div>
 								<div class="image">
-									<div class="overlay"></div> <!-- New line -->
+									<div class="overlay"></div>
 									<img src="/portfolio/images/kitchen.jpeg">
 								</div>
 							</div>
@@ -125,17 +163,16 @@
 				<!-- The Life App -->
 				<div class="col-md-4 col-sm-6">
 					<div class="portfolio-item">
-						<a href="">
+						<a href="javascript:void(0);" onclick="openModal('The Life App', 'App for managing personal life/progress')">
 							<div class="thumb">
 								<div class="hover-effect">
 									<div class="hover-content">
 										<h1><strong>The Life App</strong></h1>
 										<p>App for managing personal life/progress</p>
-										<!-- <p>My full-stack application for privately managing my notes, finances, to-do lists, project progress, collections of items, and article reading (IN PROGRESS).</p> -->
 									</div>
 								</div>
 								<div class="image">
-									<div class="overlay"></div> <!-- New line -->
+									<div class="overlay"></div>
 									<img src="/portfolio/images/barcelona.jpeg">
 								</div>
 							</div>
@@ -146,17 +183,16 @@
 				<!-- PlayerNet -->
 				<div class="col-md-4 col-sm-6">
 					<div class="portfolio-item">
-						<a href="">
+						<a href="javascript:void(0);" onclick="openModal('PlayerNet', 'Visualiser for player transfers & teammates')">
 							<div class="thumb">
 								<div class="hover-effect">
 									<div class="hover-content">
 										<h1><strong>PlayerNet</strong></h1>
 										<p>Visualiser for player transfers & teammates</p>
-										<!-- <p>Even though I've been watching soccer for more than a decade, I still stumble across players that I had no idea played with each other at some point. Therefore, I developed this fun tool to look up players and visualize when and how long they overlapped with their teammates across their career (IN PROGRESS).</p> -->
 									</div>
 								</div>
 								<div class="image">
-									<div class="overlay"></div> <!-- New line -->
+									<div class="overlay"></div>
 									<img src="/portfolio/images/mongolia.jpeg">
 								</div>
 							</div>
@@ -167,17 +203,16 @@
 				<!-- NightSight -->
 				<div class="col-md-4 col-sm-6">
 					<div class="portfolio-item">
-						<a href="">
+						<a href="javascript:void(0);" onclick="openModal('NightSight', 'Dashboard to track/analyze sleep')">
 							<div class="thumb">
 								<div class="hover-effect">
 									<div class="hover-content">
 										<h1><strong>NightSight</strong></h1>
 										<p>Dashboard to track/analyze sleep</p>
-										<!-- <p>For as long as I can remember, I've had trouble falling asleep. So, I've always been curious to see what my sleeping patterns can tell me about my body and my habits. I've been tracking the data with a FitBit and built a dashboard to feed the metrics into where I can visualize, filter, and draw insights from in order optimize my routine/well-being (IN PROGRESS).</p> -->
 									</div>
 								</div>
 								<div class="image">
-									<div class="overlay"></div> <!-- New line -->
+									<div class="overlay"></div>
 									<img src="/portfolio/images/minecraft.png">
 								</div>
 							</div>
@@ -188,17 +223,16 @@
 				<!-- JRE Analyzer -->
 				<div class="col-md-4 col-sm-6">
 					<div class="portfolio-item">
-						<a href="">
+						<a href="javascript:void(0);" onclick="openModal('JRE Analyzer', 'How often does Joe Rogan repeat stories?')">
 							<div class="thumb">
 								<div class="hover-effect">
 									<div class="hover-content">
 										<h1><strong>JRE Analyzer</strong></h1>
 										<p>How often does Joe Rogan repeat stories?</p>
-										<!-- <p>I feel a bit hesitant saying this here, but I have been listening to the Joe Rogan Experience for many years now. I try to stick to the episodes with scientists/academics but have enjoyed other ones as well since the array of guests is so diverse. Anyway, I've noticed that no matter who is on, Joe manages to bring up the same topics and anecdotes. So, I did some analysis of the episodes to see how often and when Joe's to-go topics come up :)</p> -->
 									</div>
 								</div>
 								<div class="image">
-									<div class="overlay"></div> <!-- New line -->
+									<div class="overlay"></div>
 									<img src="/portfolio/images/podcast.jpeg">
 								</div>
 							</div>
@@ -208,10 +242,36 @@
 			</div>
 		</div>
 
+		<!-- Modal -->
+		<div id="projectModal" class="modal">
+			<div class="modal-content">
+				<span class="close" onclick="closeModal()">&times;</span>
+				<h2 id="modalTitle"></h2>
+				<p id="modalDescription"></p>
+			</div>
+		</div>
+
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 		<script>window.jQuery || document.write('<script src="/portfolio/js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
 		<script src="/portfolio/js/vendor/bootstrap.min.js"></script>
 		<script src="/portfolio/js/plugins.js"></script>
 		<script src="/portfolio/js/main.js"></script>
+		<script>
+			function openModal(title, description) {
+				document.getElementById('modalTitle').innerText = title;
+				document.getElementById('modalDescription').innerText = description;
+				document.getElementById('projectModal').style.display = 'flex';
+			}
+
+			function closeModal() {
+				document.getElementById('projectModal').style.display = 'none';
+			}
+
+			window.onclick = function(event) {
+				if (event.target == document.getElementById('projectModal')) {
+					closeModal();
+				}
+			}
+		</script>
 	</body>
 </html>
