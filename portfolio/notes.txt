@@ -1,6 +1,6 @@
 FUNCTIONAL/PRIORITY:
-- Add popup with project descriptions
 - Fix the white line underneath the first image? (This is happening based on browser width??)
+- Update two images in bottom right
 
 AESTHETIC/SECONDARY:
 - Change background video?
