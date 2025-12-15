@@ -151,7 +151,7 @@
 				-webkit-backdrop-filter: blur(8px);
 				align-items: center;
 				justify-content: center;
-				padding: 40px 20px;
+				padding: 0;
 				animation: fadeIn 0.3s ease;
 			}
 
@@ -168,21 +168,18 @@
 				background: rgba(18, 18, 18, 0.95);
 				backdrop-filter: blur(20px);
 				-webkit-backdrop-filter: blur(20px);
-				border: 1px solid rgba(255, 255, 255, 0.1);
-				border-radius: 16px;
+				border: none;
+				border-radius: 0;
 				padding: 0;
-				width: 95%;
-				max-width: 1600px;
-				margin: 0 auto;
+				width: 100%;
+				max-width: none;
+				margin: 0;
 				position: relative;
-				height: calc(100vh - 80px);
-				max-height: 95vh;
+				height: 100vh;
+				max-height: none;
 				display: flex;
 				flex-direction: column;
-				box-shadow: 
-					0 20px 60px rgba(0, 0, 0, 0.6),
-					0 0 0 1px rgba(255, 255, 255, 0.05),
-					inset 0 1px 0 rgba(255, 255, 255, 0.1);
+				box-shadow: none;
 				overflow: visible;
 				animation: modalSlideIn 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 				transform-origin: center;
@@ -243,7 +240,6 @@
 			.close-btn:hover {
 				color: #fff !important;
 				background: rgba(255, 255, 255, 0.15) !important;
-				transform: rotate(90deg) scale(1.1) !important;
 				box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4) !important;
 			}
 
@@ -416,7 +412,7 @@
 				<p>Working with San Diego FC on data engineering and analytics projects to support the team's performance and operations.</p>
 			</div>
 
-			<div id="lafayette-soccer" class="hidden-description" style="display:none;" data-demo-url="">
+			<div id="lafayette-soccer" class="hidden-description" style="display:none;" data-demo-url="https://msoc-project.onrender.com/shotPlots">
 				<p>I worked as Lafayette Men's Soccer's first-ever data engineer and analyst. I developed a data processing pipeline that scraped, consolidated, and cleaned the team's performance metrics from Wyscout and supplied it to a custom-built dashboard, where the various statistics could be filtered and visualized according to the needs of the coaches/team to inform training strategy and opponent analysis.</p>
 			</div>
 
