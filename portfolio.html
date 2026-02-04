@@ -257,6 +257,66 @@
 				border: none;
 				display: block;
 			}
+
+			/* Text-only modal: centered, white, modern */
+			#modalDescription {
+				width: 100%;
+				height: 100%;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				padding: 60px 24px 40px;
+				box-sizing: border-box;
+			}
+
+			#modalDescriptionContent {
+				max-width: 560px;
+				width: 100%;
+				color: #ffffff;
+				font-family: 'Kanit', -apple-system, BlinkMacSystemFont, sans-serif;
+				font-size: 17px;
+				line-height: 1.65;
+				font-weight: 300;
+				text-align: center;
+				letter-spacing: 0.02em;
+			}
+
+			#modalDescriptionContent h1,
+			#modalDescriptionContent h2 {
+				color: #ffffff;
+				font-weight: 400;
+				margin: 0 0 1rem;
+				font-size: 1.5rem;
+				letter-spacing: 0.03em;
+			}
+
+			#modalDescriptionContent p {
+				margin: 0 0 1rem;
+				color: rgba(255, 255, 255, 0.92);
+			}
+
+			#modalDescriptionContent p:last-child {
+				margin-bottom: 0;
+			}
+
+			#modalDescriptionContent ul {
+				list-style: none;
+				padding: 0;
+				margin: 0 0 1.5rem;
+				text-align: center;
+			}
+
+			#modalDescriptionContent li {
+				margin: 0.5rem 0;
+				color: rgba(255, 255, 255, 0.92);
+				position: relative;
+				padding-left: 0;
+			}
+
+			#modalDescriptionContent strong {
+				color: #ffffff;
+				font-weight: 500;
+			}
 		</style>
 	</head>
 
@@ -417,7 +477,7 @@
 			</div>
 
 			<div id="food-tasting" class="hidden-description" style="display:none;" data-demo-url="">
-				<h2 style="text-align: center; color: #ff6b6b; margin-bottom: 20px;">In Progress / Coming Soon</h2>
+				<h2>In Progress / Coming Soon</h2>
 				<p>A web application to streamline the organization of one of Lafayette College's major annual events, Food Tasting (hosted by the International Students' Association). This project integrates Giant's inventory and automates, cleans up, and consolidates the process of ingredient submission, grocery shopping, and resource allocation for the big day!</p>
 			</div>
 
@@ -426,12 +486,12 @@
 			</div>
 
 			<div id="future-projects" class="hidden-description" style="display:none;" data-demo-url="">
-				<ul style="list-style-type: disc; padding-left: 20px;">
+				<ul>
 					<li><strong>US Soccer Federation Midfield Scouting App</strong></li>
 					<li><strong>Washington Nationals Pitcher Analysis Dashboard</strong></li>
 					<li><strong>PlayerNet</strong> (player teammate and career visualizer)</li>
 				</ul>
-				<p style="margin-top: 20px;"><strong>PlayerNet:</strong> Even though I've been watching soccer/football for more than a decade, I still stumble across players that I had no idea played with each other at some point. Therefore, I developed this tool to be able to search for a particular player and visualize when and how long they overlapped with all teammates across their career.</p>
+				<p><strong>PlayerNet:</strong> Even though I've been watching soccer/football for more than a decade, I still stumble across players that I had no idea played with each other at some point. Therefore, I developed this tool to be able to search for a particular player and visualize when and how long they overlapped with all teammates across their career.</p>
 			</div>
 		</div>
 
@@ -470,7 +530,7 @@
 				} else {
 					modalDemo.style.display = 'none';
 					modalDescriptionContent.innerHTML = projectElement.innerHTML;
-					modalDescription.style.display = 'block';
+					modalDescription.style.display = 'flex';
 				}
 				
 				document.getElementById('projectModal').style.display = 'flex';
