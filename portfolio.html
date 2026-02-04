@@ -334,33 +334,8 @@
 					</div>
 				</div>
 
-				<!-- Food Tasting -->
-				<div class="col-md-4 col-sm-6">
-					<div class="portfolio-item">
-						<a href="javascript:void(0);" onclick="openModal('food-tasting')">
-							<div class="thumb">
-								<div class="hover-effect">
-									<div class="hover-content">
-										<h1><strong>Food Tasting</strong></h1>
-										<p>App to automate/consolidate event logistics</p>
-									</div>
-								</div>
-								<div class="image">
-									<div class="overlay"></div>
-									<img src="/portfolio/images/kitchen.jpeg">
-								</div>
-							</div>
-						</a>
-					</div>
-				</div>
-
-				</div>
-
-				<!-- Second Row -->
-				<div class="row">
-
 				<!-- Yggdrasil -->
-				<div class="col-md-6 col-sm-6">
+				<div class="col-md-4 col-sm-6">
 					<div class="portfolio-item">
 						<a href="javascript:void(0);" onclick="openModal('yggdrasil')">
 							<div class="thumb">
@@ -373,6 +348,31 @@
 								<div class="image">
 									<div class="overlay"></div>
 									<img src="/portfolio/images/barcelona.jpeg">
+								</div>
+							</div>
+						</a>
+					</div>
+				</div>
+
+				</div>
+
+				<!-- Second Row -->
+				<div class="row">
+
+				<!-- Food Tasting -->
+				<div class="col-md-6 col-sm-6">
+					<div class="portfolio-item">
+						<a href="javascript:void(0);" onclick="openModal('food-tasting')">
+							<div class="thumb">
+								<div class="hover-effect">
+									<div class="hover-content">
+										<h1><strong>Food Tasting</strong></h1>
+										<p>App to automate/consolidate event logistics</p>
+									</div>
+								</div>
+								<div class="image">
+									<div class="overlay"></div>
+									<img src="/portfolio/images/kitchen.jpeg">
 								</div>
 							</div>
 						</a>
@@ -417,6 +417,7 @@
 			</div>
 
 			<div id="food-tasting" class="hidden-description" style="display:none;" data-demo-url="">
+				<h2 style="text-align: center; color: #ff6b6b; margin-bottom: 20px;">In Progress / Coming Soon</h2>
 				<p>A web application to streamline the organization of one of Lafayette College's major annual events, Food Tasting (hosted by the International Students' Association). This project integrates Giant's inventory and automates, cleans up, and consolidates the process of ingredient submission, grocery shopping, and resource allocation for the big day!</p>
 			</div>
 
@@ -425,7 +426,12 @@
 			</div>
 
 			<div id="future-projects" class="hidden-description" style="display:none;" data-demo-url="">
-				<p><strong>PlayerNet:</strong> Even though I've been watching soccer/football for more than a decade, I still stumble across players that I had no idea played with each other at some point. Therefore, I developed this tool to be able to search for a particular player and visualize when and how long they overlapped with all teammates across their career.</p>
+				<ul style="list-style-type: disc; padding-left: 20px;">
+					<li><strong>US Soccer Federation Midfield Scouting App</strong></li>
+					<li><strong>Washington Nationals Pitcher Analysis Dashboard</strong></li>
+					<li><strong>PlayerNet</strong> (player teammate and career visualizer)</li>
+				</ul>
+				<p style="margin-top: 20px;"><strong>PlayerNet:</strong> Even though I've been watching soccer/football for more than a decade, I still stumble across players that I had no idea played with each other at some point. Therefore, I developed this tool to be able to search for a particular player and visualize when and how long they overlapped with all teammates across their career.</p>
 			</div>
 		</div>
 
@@ -435,6 +441,9 @@
 				<span class="close-btn" onclick="closeModal()"></span>
 				<div id="modalDemo" style="display:none;">
 					<iframe id="demoIframe" src="" frameborder="0" allowfullscreen></iframe>
+				</div>
+				<div id="modalDescription" style="display:none;">
+					<div id="modalDescriptionContent"></div>
 				</div>
 			</div>
 		</div>
@@ -451,11 +460,17 @@
 				
 				// Show/hide demo based on whether demo URL exists
 				var modalDemo = document.getElementById('modalDemo');
+				var modalDescription = document.getElementById('modalDescription');
+				var modalDescriptionContent = document.getElementById('modalDescriptionContent');
+				
 				if (demoUrl && demoUrl.trim() !== '') {
 					document.getElementById('demoIframe').src = demoUrl;
 					modalDemo.style.display = 'flex';
+					modalDescription.style.display = 'none';
 				} else {
 					modalDemo.style.display = 'none';
+					modalDescriptionContent.innerHTML = projectElement.innerHTML;
+					modalDescription.style.display = 'block';
 				}
 				
 				document.getElementById('projectModal').style.display = 'flex';
