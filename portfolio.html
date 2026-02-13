@@ -1,561 +1,137 @@
-<!DOCTYPE HTML>
-<html>
-	<head>
-		<meta charset="utf-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-		<title>Yazdan's Portfolio</title>
-		<meta name="description" content="">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="apple-touch-icon" href="apple-touch-icon.png">
-		<link rel="icon" href="/portfolio/images/globe2.svg" type="image/png">
-		<link rel="stylesheet" href="/portfolio/css/bootstrap.min.css">
-		<link rel="stylesheet" href="/portfolio/css/bootstrap-theme.min.css">
-		<link rel="stylesheet" href="/portfolio/css/fontAwesome.css">
-		<link rel="stylesheet" href="/portfolio/css/light-box.css">
-		<link rel="stylesheet" href="/portfolio/css/templatemo-style.css">
-		<link href="https://fonts.googleapis.com/css?family=Kanit:100,200,300,400,500,600,700,800,900" rel="stylesheet">
-		<script src="/portfolio/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
-		<style>
-			/* Modern nav bar styling */
-			nav {
-				display: flex;
-				justify-content: space-between;
-				align-items: center;
-				padding: 16px 40px;
-				background: rgba(255, 255, 255, 0.05);
-				backdrop-filter: blur(6px);
-				-webkit-backdrop-filter: blur(6px);
-				border-bottom: 1px solid rgba(255, 255, 255, 0.04);
-			}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Yazdan's Portfolio</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="icon" href="/portfolio/images/globe2.svg" type="image/png">
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="/portfolio/css/style.css">
+</head>
+<body>
+	<div class="bg-video">
+		<video autoplay loop muted playsinline>
+			<source src="/dhss/media/loop.mp4" type="video/mp4">
+		</video>
+	</div>
 
-			nav {
-				font-family: 'Kanit', sans-serif;
-			}
+	<nav>
+		<div class="logo"><a href="portfolio.html">Yazdan Basir</a></div>
+		<ul>
+			<li><a href="/portfolio/Yazdan_Basir_Resume.pdf" target="_blank">Resume</a></li>
+			<li><a href="https://www.linkedin.com/in/yazdan-basir/" target="_blank">LinkedIn</a></li>
+			<li><a href="https://yazdanbasir.github.io/blog.html" target="_blank">Blog</a></li>
+			<li><a href="https://www.instagram.com/yazdan.b/" target="_blank">Instagram</a></li>
+			<li><a href="https://github.com/yazdanbasir" target="_blank">GitHub</a></li>
+		</ul>
+	</nav>
 
-			nav .logo a {
-				text-decoration: none;
-				font-size: 1.7em;
-				font-family: 'Kanit', sans-serif;
-				color: #fff;
-				transition: opacity 0.2s ease;
-			}
-
-			nav .logo a:hover {
-				opacity: 0.8;
-			}
-
-			nav ul {
-				list-style-type: none;
-				display: flex;
-				gap: 28px;
-				margin: 0;
-				padding: 0;
-			}
-
-			nav ul li {
-				margin: 0;
-				padding: 0;
-			}
-
-			nav ul li a {
-				text-decoration: none;
-				font-size: 1.7em;
-				color: rgba(255, 255, 255, 0.85);
-				font-family: 'Kanit', sans-serif;
-				transition: all 0.2s ease;
-				position: relative;
-				padding: 4px 0;
-			}
-
-			nav ul li a:hover {
-				color: #fff;
-			}
-
-			/* Profile picture circle */
-			#video-container .video-content .inner .profile-pic {
-				width: 120px;
-				height: 120px;
-				border-radius: 50%;
-				object-fit: cover;
-				object-position: center;
-				transform: scale(1.3);
-				border: 3px solid rgba(255, 255, 255, 0.3);
-				margin-bottom: 5px;
-				background: rgba(255, 255, 255, 0.1);
-				display: block;
-			}
-
-			/* Header text - normal case instead of uppercase */
-			#video-container .video-content .inner h1 {
-				text-transform: none;
-			}
-
-			/* Smaller font for welcome text */
-			#video-container .video-content .inner h2 {
-				font-size: 22px;
-				font-weight: 300;
-				line-height: 1.2;
-				margin: 0;
-			}
-
-			#video-container .video-content .inner h2:first-of-type {
-				margin-top: 10px;
-			}
-
-			/* Portfolio item improvements */
-			.full-screen-portfolio .portfolio-item {
-				overflow: hidden;
-				border-radius: 8px;
-				transition: transform 0.3s ease, box-shadow 0.3s ease;
-			}
-
-			.full-screen-portfolio .portfolio-item:hover {
-				transform: translateY(-4px);
-				box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
-			}
-
-			.full-screen-portfolio .portfolio-item .image {
-				overflow: hidden;
-				border-radius: 8px;
-			}
-
-			.full-screen-portfolio .portfolio-item .image img {
-				transition: transform 0.5s ease;
-			}
-
-			.full-screen-portfolio .portfolio-item:hover .image img {
-				transform: scale(1.05);
-			}
-
-			.full-screen-portfolio .portfolio-item .image .overlay {
-				background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.4) 50%, rgba(0, 0, 0, 0.1) 100%);
-				transition: opacity 0.3s ease;
-			}
-
-			.full-screen-portfolio .portfolio-item:hover .image .overlay {
-				opacity: 0.9;
-			}
-
-			/* Modal styles - Enhanced with depth and animations */
-			.modal {
-				display: none;
-				position: fixed;
-				z-index: 1000;
-				left: 0;
-				top: 0;
-				width: 100%;
-				height: 100%;
-				overflow: auto;
-				background-color: rgba(0, 0, 0, 0.5);
-				backdrop-filter: blur(8px);
-				-webkit-backdrop-filter: blur(8px);
-				align-items: center;
-				justify-content: center;
-				padding: 0;
-				animation: fadeIn 0.3s ease;
-			}
-
-			@keyframes fadeIn {
-				from {
-					opacity: 0;
-				}
-				to {
-					opacity: 1;
-				}
-			}
-
-			.modal-content {
-				background: rgba(18, 18, 18, 0.95);
-				backdrop-filter: blur(20px);
-				-webkit-backdrop-filter: blur(20px);
-				border: none;
-				border-radius: 0;
-				padding: 0;
-				width: 100%;
-				max-width: none;
-				margin: 0;
-				position: relative;
-				height: 100vh;
-				max-height: none;
-				display: flex;
-				flex-direction: column;
-				box-shadow: none;
-				overflow: visible;
-				animation: modalSlideIn 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-				transform-origin: center;
-			}
-
-			@keyframes modalSlideIn {
-				from {
-					opacity: 0;
-					transform: scale(0.95) translateY(20px);
-				}
-				to {
-					opacity: 1;
-					transform: scale(1) translateY(0);
-				}
-			}
-
-			.modal-content {
-				font-family: 'Kanit', sans-serif;
-			}
-
-			.modal-content .close-btn {
-				position: absolute !important;
-				top: 16px !important;
-				right: 20px !important;
-				font-size: 28px !important;
-				font-weight: 300 !important;
-				color: rgba(255, 255, 255, 0.8) !important;
-				cursor: pointer !important;
-				line-height: 40px !important;
-				z-index: 1002 !important;
-				width: 40px !important;
-				height: 40px !important;
-				display: flex !important;
-				align-items: center !important;
-				justify-content: center !important;
-				border-radius: 50% !important;
-				transition: all 0.3s ease !important;
-				font-family: 'Kanit', sans-serif !important;
-				background: rgba(255, 255, 255, 0.08) !important;
-				backdrop-filter: blur(10px) !important;
-				-webkit-backdrop-filter: blur(10px) !important;
-				border: 1px solid rgba(255, 255, 255, 0.12) !important;
-				box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3) !important;
-				text-align: center !important;
-				padding: 0 !important;
-				margin: 0 !important;
-			}
-
-			.modal-content .close-btn::before {
-				content: '×';
-				position: absolute;
-				top: 50%;
-				left: 50%;
-				transform: translate(-50%, -50%);
-				line-height: 1;
-			}
-
-			.close-btn:hover {
-				color: #fff !important;
-				background: rgba(255, 255, 255, 0.15) !important;
-				box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4) !important;
-			}
-
-			#modalDemo {
-				width: 100%;
-				height: 100%;
-				background: #000;
-				overflow: hidden;
-				display: flex;
-			}
-
-			#demoIframe {
-				width: 100%;
-				height: 100%;
-				border: none;
-				display: block;
-			}
-
-			/* Text-only modal: centered, white, modern */
-			#modalDescription {
-				width: 100%;
-				height: 100%;
-				display: flex;
-				align-items: center;
-				justify-content: center;
-				padding: 60px 24px 40px;
-				box-sizing: border-box;
-			}
-
-			#modalDescriptionContent {
-				max-width: 800px;
-				width: 100%;
-				color: #ffffff;
-				font-family: 'Kanit', -apple-system, BlinkMacSystemFont, sans-serif;
-				font-size: 30px;
-				line-height: 1.65;
-				font-weight: 300;
-				text-align: center;
-				letter-spacing: 0.02em;
-			}
-
-			#modalDescriptionContent h1,
-			#modalDescriptionContent h2 {
-				color: #ffffff;
-				font-weight: 400;
-				margin: 0 0 1rem;
-				font-size: 4.5rem;
-				letter-spacing: 0.03em;
-				white-space: nowrap;
-			}
-
-			#modalDescriptionContent p {
-				margin: 0 0 1rem;
-				color: rgba(255, 255, 255, 0.92);
-			}
-
-			#modalDescriptionContent p:last-child {
-				margin-bottom: 0;
-			}
-
-			#modalDescriptionContent ul {
-				list-style: disc;
-				padding-left: 1.25rem;
-				margin: 0 0 1.5rem;
-				text-align: left;
-			}
-
-			#modalDescriptionContent li {
-				margin: 0.35rem 0;
-				color: rgba(255, 255, 255, 0.92);
-				padding-left: 0.25rem;
-			}
-
-			#modalDescriptionContent strong {
-				color: #ffffff;
-				font-weight: 500;
-			}
-		</style>
-	</head>
-
-	<body>
-		<nav>
-			<div class="logo"><a href="portfolio.html">Yazdan's Portfolio</a></div>
-			<ul>
-				<li><a href="/portfolio/Yazdan_Basir_Resume.pdf" target="_blank">Resumé</a></li>
-				<li><a href="https://www.linkedin.com/in/yazdan-basir/" target="_blank">LinkedIn</a></li>
-				<li><a href="https://yazdanbasir.github.io/blog.html" target="_blank">Blog</a></li>
-				<li><a href="https://www.instagram.com/yazdan.b/" target="_blank">Instagram</a></li>
-				<li><a href="https://github.com/yazdanbasir" target="_blank">GitHub</a></li>
-			</ul>
-		</nav>
-
-		<div id="video-container">
-			<div class="video-overlay"></div>
-
-			<div class="video-content">
-				<div class="inner">
-					<img src="/portfolio/images/portrait.png" alt="Profile Picture" class="profile-pic" id="profilePic">
-					<h1>Yazdan Basir</h1>
-					<h2>Welcome! Feel free to browse through my projects below.</h2>
-					<h2>Thank you :)</h2>
-				</div>
+	<div class="page">
+		<div class="content">
+			<div class="profile">
+				<img src="/portfolio/images/portrait.png" alt="Yazdan Basir" class="pic">
+				<h1>Yazdan Basir</h1>
+				<p class="tagline">Welcome! Feel free to browse through my projects.</p>
 			</div>
 
-			<video autoplay="" loop="" muted>
-				<source src="/dhss/media/loop.mp4" type="video/mp4"/>
-			</video>
-		</div>
-
-		<div class="full-screen-portfolio" id="portfolio">
-			<div class="container-fluid">
-				<!-- First Row -->
-				<div class="row">
-
-				<!-- San Diego FC -->
-				<div class="col-md-4 col-sm-6">
-					<div class="portfolio-item">
-						<a href="javascript:void(0);" onclick="openModal('san-diego-fc')">
-							<div class="thumb">
-								<div class="hover-effect">
-									<div class="hover-content">
-										<h1><strong>San Diego FC</strong></h1>
-										<p>Match Analysis Tool</p>
-									</div>
-								</div>
-								<div class="image">
-									<div class="overlay"></div>
-									<img src="/portfolio/images/floodlights.jpeg">
-								</div>
-							</div>
-						</a>
-					</div>
+			<div class="projects" id="portfolio">
+				<div class="label">Projects</div>
+				<div class="project-row" data-project="san-diego-fc">
+					<span class="num">01</span>
+					<span class="name">San Diego FC</span>
 				</div>
-
-				<!-- Lafayette Men's Soccer -->
-				<div class="col-md-4 col-sm-6">
-					<div class="portfolio-item">
-						<a href="javascript:void(0);" onclick="openModal('lafayette-soccer')">
-							<div class="thumb">
-								<div class="hover-effect">
-									<div class="hover-content">
-										<h1><strong>Lafayette Men's Soccer</strong></h1>
-										<p>Dashboard for player performance metrics</p>
-									</div>
-								</div>
-								<div class="image">
-									<div class="overlay"></div>
-									<img src="/portfolio/images/atleti.jpeg">
-								</div>
-							</div>
-						</a>
-					</div>
+				<div class="project-row" data-project="lafayette-soccer">
+					<span class="num">02</span>
+					<span class="name">Lafayette Men's Soccer</span>
 				</div>
-
-				<!-- Yggdrasil -->
-				<div class="col-md-4 col-sm-6">
-					<div class="portfolio-item">
-						<a href="javascript:void(0);" onclick="openModal('yggdrasil')">
-							<div class="thumb">
-								<div class="hover-effect">
-									<div class="hover-content">
-										<h1><strong>Yggdrasil</strong></h1>
-										<p>Personal management + finances</p>
-									</div>
-								</div>
-								<div class="image">
-									<div class="overlay"></div>
-									<img src="/portfolio/images/barcelona.jpeg">
-								</div>
-							</div>
-						</a>
-					</div>
+				<div class="project-row" data-project="yggdrasil">
+					<span class="num">03</span>
+					<span class="name">Yggdrasil</span>
 				</div>
-
+				<div class="project-row" data-project="food-tasting">
+					<span class="num">04</span>
+					<span class="name">Food Tasting</span>
 				</div>
-
-				<!-- Second Row -->
-				<div class="row">
-
-				<!-- Food Tasting -->
-				<div class="col-md-6 col-sm-6">
-					<div class="portfolio-item">
-						<a href="javascript:void(0);" onclick="openModal('food-tasting')">
-							<div class="thumb">
-								<div class="hover-effect">
-									<div class="hover-content">
-										<h1><strong>Food Tasting</strong></h1>
-										<p>App to automate/consolidate event logistics</p>
-									</div>
-								</div>
-								<div class="image">
-									<div class="overlay"></div>
-									<img src="/portfolio/images/kitchen.jpeg">
-								</div>
-							</div>
-						</a>
-					</div>
-				</div>
-
-				<!-- Future Projects -->
-				<div class="col-md-6 col-sm-6">
-					<div class="portfolio-item">
-						<a href="javascript:void(0);" onclick="openModal('future-projects')">
-							<div class="thumb">
-								<div class="hover-effect">
-									<div class="hover-content">
-										<h1><strong>Future Projects</strong></h1>
-										<p>Projects in development</p>
-									</div>
-								</div>
-								<div class="image">
-									<div class="overlay"></div>
-									<img src="/portfolio/images/mongolia.jpeg">
-								</div>
-							</div>
-						</a>
-					</div>
-				</div>
-
-				</div>
-			</div>
-
-			<!-- Hidden Descriptions with Demo URLs -->
-			<!-- To add a demo: set data-demo-url="YOUR_URL_HERE" on the div below -->
-			<!-- Examples: -->
-			<!-- React app: data-demo-url="https://your-react-app.vercel.app" -->
-			<!-- Bokeh dashboard: data-demo-url="https://your-bokeh-server.com/dashboard" -->
-			<!-- Full stack app: data-demo-url="https://your-app.com" -->
-			<div id="san-diego-fc" class="hidden-description" style="display:none;" data-demo-url="https://match-analysis.vercel.app/">
-				<p>Working with San Diego FC on data engineering and analytics projects to support the team's performance and operations.</p>
-			</div>
-
-			<div id="lafayette-soccer" class="hidden-description" style="display:none;" data-demo-url="https://msoc-project.vercel.app/">
-				<p>I worked as Lafayette Men's Soccer's first-ever data engineer and analyst. I developed a data processing pipeline that scraped, consolidated, and cleaned the team's performance metrics from Wyscout and supplied it to a custom-built dashboard, where the various statistics could be filtered and visualized according to the needs of the coaches/team to inform training strategy and opponent analysis.</p>
-			</div>
-
-			<div id="food-tasting" class="hidden-description" style="display:none;" data-demo-url="">
-				<h2>In Progress / Coming Soon</h2>
-				<p>A web application to streamline the organization of one of Lafayette College's major annual events, Food Tasting (hosted by the International Students' Association). This project integrates Giant's inventory and automates, cleans up, and consolidates the process of ingredient submission, grocery shopping, and resource allocation for the big day!</p>
-			</div>
-
-			<div id="yggdrasil" class="hidden-description" style="display:none;" data-demo-url="https://centsible-demo1.vercel.app/">
-				<p>A comprehensive personal management and finance system designed to help manage life</p>
-			</div>
-
-			<div id="future-projects" class="hidden-description" style="display:none;" data-demo-url="">
-				<ul>
-					<li><strong>US Soccer Federation Midfield Scouting App</strong></li>
-					<li><strong>Washington Nationals Pitcher Analysis Dashboard</strong></li>
-					<li><strong>PlayerNet</strong> (player teammate and career visualizer)</li>
-				</ul>
-			</div>
-		</div>
-
-		<!-- Modal -->
-		<div id="projectModal" class="modal">
-			<div class="modal-content">
-				<span class="close-btn" onclick="closeModal()"></span>
-				<div id="modalDemo" style="display:none;">
-					<iframe id="demoIframe" src="" frameborder="0" allowfullscreen></iframe>
-				</div>
-				<div id="modalDescription" style="display:none;">
-					<div id="modalDescriptionContent"></div>
+				<div class="project-row" data-project="future-projects">
+					<span class="num">05</span>
+					<span class="name">Future Projects</span>
 				</div>
 			</div>
 		</div>
+	</div>
 
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-		<script>window.jQuery || document.write('<script src="/portfolio/js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
-		<script src="/portfolio/js/vendor/bootstrap.min.js"></script>
-		<script src="/portfolio/js/plugins.js"></script>
-		<script src="/portfolio/js/main.js"></script>
-		<script>
-			function openModal(projectId) {
-				var projectElement = document.getElementById(projectId);
-				var demoUrl = projectElement.getAttribute('data-demo-url');
-				
-				// Show/hide demo based on whether demo URL exists
-				var modalDemo = document.getElementById('modalDemo');
-				var modalDescription = document.getElementById('modalDescription');
-				var modalDescriptionContent = document.getElementById('modalDescriptionContent');
-				
-				if (demoUrl && demoUrl.trim() !== '') {
-					document.getElementById('demoIframe').src = demoUrl;
-					modalDemo.style.display = 'flex';
-					modalDescription.style.display = 'none';
+	<!-- Project data -->
+	<div id="san-diego-fc" class="hidden-description" style="display:none" data-demo-url="https://match-analysis.vercel.app/">
+		<p>Working with San Diego FC on data engineering and analytics projects to support the team's performance and operations.</p>
+	</div>
+	<div id="lafayette-soccer" class="hidden-description" style="display:none" data-demo-url="https://msoc-project.vercel.app/">
+		<p>I worked as Lafayette Men's Soccer's first-ever data engineer and analyst. I developed a data processing pipeline that scraped, consolidated, and cleaned the team's performance metrics from Wyscout and supplied it to a custom-built dashboard, where the various statistics could be filtered and visualized according to the needs of the coaches/team to inform training strategy and opponent analysis.</p>
+	</div>
+	<div id="food-tasting" class="hidden-description" style="display:none" data-demo-url="">
+		<h2>In Progress / Coming Soon</h2>
+		<p>A web application to streamline the organization of one of Lafayette College's major annual events, Food Tasting (hosted by the International Students' Association). This project integrates Giant's inventory and automates, cleans up, and consolidates the process of ingredient submission, grocery shopping, and resource allocation for the big day!</p>
+	</div>
+	<div id="yggdrasil" class="hidden-description" style="display:none" data-demo-url="https://centsible-demo1.vercel.app/">
+		<p>A comprehensive personal management and finance system designed to help manage life</p>
+	</div>
+	<div id="future-projects" class="hidden-description" style="display:none" data-demo-url="">
+		<ul>
+			<li><strong>US Soccer Federation Midfield Scouting App</strong></li>
+			<li><strong>Washington Nationals Pitcher Analysis Dashboard</strong></li>
+			<li><strong>PlayerNet</strong> (player teammate and career visualizer)</li>
+		</ul>
+	</div>
+
+	<!-- Modal -->
+	<div id="projectModal" class="modal">
+		<div class="modal-content">
+			<span class="close-btn" onclick="closeModal()"></span>
+			<div id="modalDemo" style="display:none">
+				<iframe id="demoIframe" src="" allowfullscreen></iframe>
+			</div>
+			<div id="modalDescription" style="display:none">
+				<div id="modalDescriptionContent"></div>
+			</div>
+		</div>
+	</div>
+
+	<script>
+		var modal = document.getElementById('projectModal');
+		var iframe = document.getElementById('demoIframe');
+		var demo = document.getElementById('modalDemo');
+		var desc = document.getElementById('modalDescription');
+		var descContent = document.getElementById('modalDescriptionContent');
+
+		document.querySelectorAll('.project-row').forEach(function(row) {
+			row.addEventListener('click', function() {
+				var el = document.getElementById(this.dataset.project);
+				var url = el.dataset.demoUrl;
+
+				if (url && url.trim()) {
+					iframe.src = url;
+					demo.style.display = 'flex';
+					desc.style.display = 'none';
 				} else {
-					modalDemo.style.display = 'none';
-					modalDescriptionContent.innerHTML = projectElement.innerHTML;
-					modalDescription.style.display = 'flex';
+					demo.style.display = 'none';
+					descContent.innerHTML = el.innerHTML;
+					desc.style.display = 'flex';
 				}
-				
-				document.getElementById('projectModal').style.display = 'flex';
-			}
-
-			function closeModal() {
-				document.getElementById('projectModal').style.display = 'none';
-				// Clear iframe src when closing to stop any running processes
-				document.getElementById('demoIframe').src = '';
-			}
-
-			window.onclick = function(event) {
-				if (event.target == document.getElementById('projectModal')) {
-					closeModal();
-				}
-			}
-
-			// Close modal on Escape key press
-			document.addEventListener('keydown', function(event) {
-				if (event.key === 'Escape' || event.keyCode === 27) {
-					var modal = document.getElementById('projectModal');
-					if (modal.style.display === 'flex') {
-						closeModal();
-					}
-				}
+				modal.style.display = 'flex';
 			});
-		</script>
-	</body>
+		});
+
+		function closeModal() {
+			modal.style.display = 'none';
+			iframe.src = '';
+		}
+
+		modal.addEventListener('click', function(e) {
+			if (e.target === modal) closeModal();
+		});
+
+		document.addEventListener('keydown', function(e) {
+			if (e.key === 'Escape' && modal.style.display === 'flex') closeModal();
+		});
+	</script>
+</body>
 </html>
