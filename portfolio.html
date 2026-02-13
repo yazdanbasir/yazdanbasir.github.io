@@ -16,7 +16,6 @@
 	</div>
 
 	<nav>
-		<div class="logo"><a href="portfolio.html">Yazdan Basir</a></div>
 		<ul>
 			<li><a href="/portfolio/Yazdan_Basir_Resume.pdf" target="_blank">Resume</a></li>
 			<li><a href="https://www.linkedin.com/in/yazdan-basir/" target="_blank">LinkedIn</a></li>
@@ -36,48 +35,53 @@
 
 			<div class="projects" id="portfolio">
 				<div class="label">Projects</div>
-				<div class="project-row" data-project="san-diego-fc">
+				<div class="project-row" data-project="washington-nationals">
 					<span class="num">01</span>
-					<span class="name">San Diego FC</span>
+					<div class="info"><span class="name">Washington Nationals</span><span class="desc">Pitcher analysis dashboard</span></div>
 				</div>
-				<div class="project-row" data-project="lafayette-soccer">
+				<div class="project-row" data-demo-url="https://match-analysis.vercel.app/">
 					<span class="num">02</span>
-					<span class="name">Lafayette Men's Soccer</span>
+					<div class="info"><span class="name">San Diego FC</span><span class="desc">Match reports and performance analytics</span></div>
 				</div>
-				<div class="project-row" data-project="yggdrasil">
+				<div class="project-row" data-project="us-soccer">
 					<span class="num">03</span>
-					<span class="name">Yggdrasil</span>
+					<div class="info"><span class="name">US Soccer</span><span class="desc">Midfield scouting application</span></div>
+				</div>
+				<div class="project-row" data-demo-url="https://msoc-project.vercel.app/">
+					<span class="num">04</span>
+					<div class="info"><span class="name">Lafayette Men's Soccer</span><span class="desc">Team performance dashboard</span></div>
+				</div>
+				<div class="project-row" data-demo-url="https://centsible-demo1.vercel.app/">
+					<span class="num">05</span>
+					<div class="info"><span class="name">Yggdrasil</span><span class="desc">Personal management and finances</span></div>
 				</div>
 				<div class="project-row" data-project="food-tasting">
-					<span class="num">04</span>
-					<span class="name">Food Tasting</span>
+					<span class="num">06</span>
+					<div class="info"><span class="name">Food Tasting</span><span class="desc">Event logistics and resource allocation app</span></div>
 				</div>
 				<div class="project-row" data-project="future-projects">
-					<span class="num">05</span>
-					<span class="name">Future Projects</span>
+					<span class="num">07</span>
+					<div class="info"><span class="name">Future Projects</span><span class="desc">git commit -m "in progress"</span></div>
 				</div>
 			</div>
 		</div>
 	</div>
 
-	<!-- Project data -->
-	<div id="san-diego-fc" class="hidden-description" style="display:none" data-demo-url="https://match-analysis.vercel.app/">
-		<p>Working with San Diego FC on data engineering and analytics projects to support the team's performance and operations.</p>
+	<!-- Project descriptions (shown in modal for projects without a demo app) -->
+	<div id="washington-nationals" class="hidden-description" style="display:none">
+		<h2>In Progress / Coming Soon</h2>
+		<p>Pitcher analysis dashboard for the Washington Nationals.</p>
 	</div>
-	<div id="lafayette-soccer" class="hidden-description" style="display:none" data-demo-url="https://msoc-project.vercel.app/">
-		<p>I worked as Lafayette Men's Soccer's first-ever data engineer and analyst. I developed a data processing pipeline that scraped, consolidated, and cleaned the team's performance metrics from Wyscout and supplied it to a custom-built dashboard, where the various statistics could be filtered and visualized according to the needs of the coaches/team to inform training strategy and opponent analysis.</p>
+	<div id="us-soccer" class="hidden-description" style="display:none">
+		<h2>In Progress / Coming Soon</h2>
+		<p>Midfield scouting application for the US Soccer Federation.</p>
 	</div>
-	<div id="food-tasting" class="hidden-description" style="display:none" data-demo-url="">
+	<div id="food-tasting" class="hidden-description" style="display:none">
 		<h2>In Progress / Coming Soon</h2>
 		<p>A web application to streamline the organization of one of Lafayette College's major annual events, Food Tasting (hosted by the International Students' Association). This project integrates Giant's inventory and automates, cleans up, and consolidates the process of ingredient submission, grocery shopping, and resource allocation for the big day!</p>
 	</div>
-	<div id="yggdrasil" class="hidden-description" style="display:none" data-demo-url="https://centsible-demo1.vercel.app/">
-		<p>A comprehensive personal management and finance system designed to help manage life</p>
-	</div>
-	<div id="future-projects" class="hidden-description" style="display:none" data-demo-url="">
+	<div id="future-projects" class="hidden-description" style="display:none">
 		<ul>
-			<li><strong>US Soccer Federation Midfield Scouting App</strong></li>
-			<li><strong>Washington Nationals Pitcher Analysis Dashboard</strong></li>
 			<li><strong>PlayerNet</strong> (player teammate and career visualizer)</li>
 		</ul>
 	</div>
@@ -104,14 +108,14 @@
 
 		document.querySelectorAll('.project-row').forEach(function(row) {
 			row.addEventListener('click', function() {
-				var el = document.getElementById(this.dataset.project);
-				var url = el.dataset.demoUrl;
+				var url = this.dataset.demoUrl;
+				var el = this.dataset.project ? document.getElementById(this.dataset.project) : null;
 
-				if (url && url.trim()) {
+				if (url) {
 					iframe.src = url;
 					demo.style.display = 'flex';
 					desc.style.display = 'none';
-				} else {
+				} else if (el) {
 					demo.style.display = 'none';
 					descContent.innerHTML = el.innerHTML;
 					desc.style.display = 'flex';

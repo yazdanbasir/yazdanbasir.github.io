@@ -1,6 +1,7 @@
 :root {
 	--accent: #d4a843;
 	--accent-dim: rgba(212, 168, 67, 0.4);
+	--accent-glow: rgba(212, 168, 67, 0.15);
 }
 
 *, *::before, *::after {
@@ -18,7 +19,7 @@ html, body {
 	-webkit-font-smoothing: antialiased;
 }
 
-/* Video background */
+/* ===== Background layers ===== */
 .bg-video {
 	position: fixed;
 	inset: 0;
@@ -35,53 +36,42 @@ html, body {
 	content: '';
 	position: absolute;
 	inset: 0;
-	background: rgba(0, 0, 0, 0.9);
+	background: rgba(0, 0, 0, 0.92);
 	z-index: 1;
 }
 
-/* Nav */
+/* ===== Nav ===== */
 nav {
 	position: fixed;
-	top: 0;
+	bottom: 0;
 	left: 0;
 	right: 0;
 	z-index: 100;
 	display: flex;
-	justify-content: space-between;
+	justify-content: center;
 	align-items: center;
-	padding: 24px 48px;
-}
-
-nav .logo a {
-	text-decoration: none;
-	font-size: 15px;
-	color: rgba(255, 255, 255, 0.5);
-	letter-spacing: -0.01em;
-}
-
-nav .logo a:hover {
-	color: var(--accent);
+	padding: 28px 48px;
 }
 
 nav ul {
 	list-style: none;
 	display: flex;
-	gap: 32px;
+	gap: 36px;
 }
 
 nav ul li a {
 	text-decoration: none;
-	font-size: 14px;
-	color: rgba(255, 255, 255, 0.35);
-	letter-spacing: -0.01em;
+	font-size: 15px;
+	color: rgba(255, 255, 255, 0.3);
+	letter-spacing: 0.02em;
 	transition: color 0.2s;
 }
 
 nav ul li a:hover {
-	color: var(--accent);
+	color: rgba(255, 255, 255, 0.7);
 }
 
-/* Layout */
+/* ===== Layout ===== */
 .page {
 	position: relative;
 	z-index: 10;
@@ -95,15 +85,14 @@ nav ul li a:hover {
 .content {
 	display: flex;
 	align-items: center;
-	justify-content: center;
-	gap: 140px;
-	max-width: 1000px;
+	gap: 80px;
+	max-width: 1100px;
 	width: 100%;
 }
 
-/* Profile */
+/* ===== Profile ===== */
 .profile {
-	flex-shrink: 0;
+	flex: 1;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -111,25 +100,26 @@ nav ul li a:hover {
 }
 
 .profile .pic {
-	width: 96px;
-	height: 96px;
+	width: 120px;
+	height: 120px;
 	border-radius: 50%;
 	object-fit: cover;
 	border: 1.5px solid var(--accent-dim);
 	margin-bottom: 28px;
+	box-shadow: 0 0 24px var(--accent-glow), 0 0 60px rgba(212, 168, 67, 0.06);
 }
 
 .profile h1 {
-	font-size: 42px;
+	font-size: 58px;
 	font-weight: 500;
 	line-height: 1.1;
-	margin-bottom: 12px;
-	color: var(--accent);
+	margin-bottom: 14px;
+	color: #fff;
 	letter-spacing: -0.03em;
 }
 
 .profile .tagline {
-	font-size: 16px;
+	font-size: 18px;
 	font-weight: 300;
 	color: rgba(255, 255, 255, 0.3);
 	line-height: 1.6;
@@ -137,14 +127,13 @@ nav ul li a:hover {
 	letter-spacing: -0.01em;
 }
 
-/* Projects */
+/* ===== Projects ===== */
 .projects {
 	flex: 1;
-	max-width: 460px;
 }
 
 .projects .label {
-	font-size: 12px;
+	font-size: 14px;
 	font-weight: 500;
 	color: var(--accent-dim);
 	letter-spacing: 0.08em;
@@ -154,41 +143,74 @@ nav ul li a:hover {
 
 .project-row {
 	display: flex;
-	align-items: baseline;
-	padding: 18px 0;
-	border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+	align-items: center;
+	padding: 16px 0;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 	cursor: pointer;
-	transition: padding-left 0.3s;
+	transition: padding-left 0.3s, border-color 0.3s, background 0.3s;
+	border-radius: 2px;
 }
 
 .project-row:first-of-type {
-	border-top: 1px solid rgba(255, 255, 255, 0.06);
+	border-top: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .project-row:hover {
-	padding-left: 8px;
-	border-color: rgba(212, 168, 67, 0.12);
+	padding-left: 12px;
+	border-color: rgba(212, 168, 67, 0.15);
+	background: rgba(212, 168, 67, 0.03);
 }
 
 .project-row .num {
-	font-size: 13px;
-	color: rgba(212, 168, 67, 0.25);
+	font-size: 15px;
+	color: rgba(212, 168, 67, 0.2);
 	width: 36px;
 	flex-shrink: 0;
 	font-variant-numeric: tabular-nums;
+	transition: color 0.2s;
+	align-self: flex-start;
+	line-height: 1.8;
+}
+
+.project-row .info {
+	display: flex;
+	flex-direction: column;
 }
 
 .project-row .name {
-	font-size: 20px;
-	color: rgba(255, 255, 255, 0.55);
-	transition: color 0.2s;
+	font-size: 24px;
+	color: rgba(255, 255, 255, 0.5);
+	transition: color 0.2s, text-shadow 0.3s;
 	letter-spacing: -0.02em;
 }
 
-.project-row:hover .name { color: var(--accent); }
-.project-row:hover .num { color: var(--accent-dim); }
+.project-row .desc {
+	font-size: 13px;
+	color: rgba(255, 255, 255, 0);
+	font-weight: 300;
+	letter-spacing: -0.01em;
+	max-height: 0;
+	overflow: hidden;
+	transition: max-height 0.3s, color 0.3s, margin 0.3s;
+	margin-top: 0;
+}
 
-/* Modal */
+.project-row:hover .desc {
+	color: rgba(255, 255, 255, 0.45);
+	max-height: 24px;
+	margin-top: 4px;
+}
+
+.project-row:hover .name {
+	color: var(--accent);
+	text-shadow: 0 0 20px rgba(212, 168, 67, 0.2);
+}
+
+.project-row:hover .num {
+	color: var(--accent-dim);
+}
+
+/* ===== Modal ===== */
 .modal {
 	display: none;
 	position: fixed;
@@ -315,15 +337,15 @@ nav ul li a:hover {
 	color: rgba(255, 255, 255, 0.9);
 }
 
-/* Responsive */
+/* ===== Responsive ===== */
 @media (max-width: 768px) {
 	html, body { overflow-y: auto; }
-	nav { padding: 18px 24px; }
-	nav ul { gap: 18px; }
+	nav { padding: 20px 24px; }
+	nav ul { gap: 20px; }
 	nav ul li a { font-size: 13px; }
 
 	.page {
-		padding: 110px 24px 60px;
+		padding: 60px 24px 80px;
 		height: auto;
 		min-height: 100vh;
 	}
@@ -334,8 +356,8 @@ nav ul li a:hover {
 		align-items: center;
 	}
 
-	.profile h1 { font-size: 32px; }
-	.profile .tagline { font-size: 15px; }
+	.profile h1 { font-size: 38px; }
+	.profile .tagline { font-size: 17px; }
 	.projects { max-width: 100%; width: 100%; }
-	.project-row .name { font-size: 18px; }
+	.project-row .name { font-size: 20px; }
 }
