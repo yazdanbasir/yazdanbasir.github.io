@@ -39,26 +39,32 @@
 					<span class="num">00</span>
 					<div class="info"><span class="name">Washington Nationals</span><span class="desc">Pitcher analysis dashboard</span></div>
 				</div> -->
+				
 				<div class="project-row" data-demo-url="https://match-analysis.vercel.app/">
 					<span class="num">01</span>
 					<div class="info"><span class="name">San Diego FC</span><span class="desc">Match reports and performance analytics</span></div>
 				</div>
-				<div class="project-row" data-demo-url="https://midfielder-scouting-app-ybasir.streamlit.app/">
+				
+				<div class="project-row" data-demo-url="https://midfielder-scouting-app-ybasir.streamlit.app/" data-open-new-tab>
 					<span class="num">02</span>
 					<div class="info"><span class="name">US Soccer Federation</span><span class="desc">Midfield scouting application</span></div>
 				</div>
+				
 				<div class="project-row" data-demo-url="https://msoc-project.vercel.app/">
 					<span class="num">03</span>
 					<div class="info"><span class="name">Lafayette Men's Soccer</span><span class="desc">Team performance dashboard</span></div>
 				</div>
+				
 				<div class="project-row" data-demo-url="https://centsible-demo1.vercel.app/">
 					<span class="num">04</span>
 					<div class="info"><span class="name">Yggdrasil</span><span class="desc">Personal management and finances</span></div>
 				</div>
+				
 				<div class="project-row" data-project="food-tasting">
 					<span class="num">05</span>
 					<div class="info"><span class="name">Food Tasting</span><span class="desc">Event logistics and resource allocation app</span></div>
 				</div>
+				
 				<div class="project-row" data-project="future-projects">
 					<span class="num">06</span>
 					<div class="info"><span class="name">Future Projects</span><span class="desc">git commit -m "in progress"</span></div>
@@ -107,6 +113,10 @@
 				var url = this.dataset.demoUrl;
 				var el = this.dataset.project ? document.getElementById(this.dataset.project) : null;
 
+				if (url && this.dataset.openNewTab !== undefined) {
+					window.open(url, '_blank');
+					return;
+				}
 				if (url) {
 					iframe.src = url;
 					demo.style.display = 'flex';
