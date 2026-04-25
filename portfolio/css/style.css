@@ -348,12 +348,16 @@ nav ul li a:hover {
 /* ===== Responsive ===== */
 @media (max-width: 768px) {
 	html, body { overflow-y: auto; }
-	nav { padding: 20px 24px; }
-	nav ul { gap: 20px; }
-	nav ul li a { font-size: 13px; }
+
+	nav {
+		padding: 12px 24px 20px;
+		background: linear-gradient(to top, rgba(0,0,0,0.98) 60%, rgba(0,0,0,0));
+	}
+	nav ul { gap: 16px; flex-wrap: wrap; justify-content: center; }
+	nav ul li a { font-size: 13px; padding: 8px 10px; }
 
 	.page {
-		padding: 60px 24px 120px;
+		padding: 60px 24px 160px;
 		height: auto;
 		min-height: 100vh;
 	}
